@@ -45,8 +45,8 @@ BEGIN
             END AS Estado_Stock,
             CASE 
                 WHEN DATEDIFF(DAY, GETDATE(), ir.Fecha_Vencimiento) <= 0 THEN 'VENCIDO'
-                WHEN DATEDIFF(DAY, GETDATE(), ir.Fecha_Vencimiento) <= 7 THEN 'PRÓXIMO (≤7 días)'
-                WHEN DATEDIFF(DAY, GETDATE(), ir.Fecha_Vencimiento) <= 30 THEN 'PRÓXIMO (≤30 días)'
+                WHEN DATEDIFF(DAY, GETDATE(), ir.Fecha_Vencimiento) <= 7 THEN 'PRÓXIMO A VENCER'
+                WHEN DATEDIFF(DAY, GETDATE(), ir.Fecha_Vencimiento) <= 30 THEN 'ALERTA'
                 ELSE 'VIGENTE'
             END AS Alerta_Vencimiento,
             CASE 

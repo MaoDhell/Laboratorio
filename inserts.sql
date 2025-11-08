@@ -122,27 +122,27 @@ INSERT INTO Inventario_Reactivos (ID_Reactivo, Lote, Cantidad_Disponible, Ubicac
 (20, 'PD2024-002', 5.250, 'A-108', '2024-10-05', '2026-10-05', 20.0, 'Disponible');
 
 -- NANOMATERIALES
-INSERT INTO Nanomateriales (Nombre_Nanomaterial, Tipo_Nanomaterial, Composicion_Quimica, Aplicacion, Tamanio_Promedio_nm, Descripcion, Fecha_Desarrollo, Costo_Estimado_Gramo, Estado_Desarrollo) VALUES
-('Nanopartículas de Oro', 'Nanopartícula', 'Au', 'Medicina', 15.5, 'NPs de oro para terapia fototérmica', '2019-05-10', 2500000, 'Producción'),
-('Nanotubos de Carbono', 'Nanotubos', 'C', 'Electrónica', 1.2, 'CNTs de pared múltiple conductores', '2018-08-15', 1800000, 'Producción'),
-('Grafeno Reducido', 'Grafeno', 'C', 'Energía', 0.8, 'rGO para supercapacitores', '2020-03-22', 950000, 'Producción'),
-('Quantum Dots CdSe', 'Quantum Dots', 'CdSe', 'Electrónica', 5.2, 'QDs emisores para displays', '2019-11-30', 3200000, 'Desarrollo'),
-('Nanopartículas de Plata', 'Nanopartícula', 'Ag', 'Medicina', 25.0, 'AgNPs antibacterianas', '2018-06-18', 1500000, 'Producción'),
-('Óxido de Zinc Nano', 'Nanopartícula', 'ZnO', 'Catálisis', 35.0, 'ZnO para fotocatálisis', '2020-01-12', 450000, 'Producción'),
-('Nanocompuesto Au-Pd', 'Nanocompuesto', 'Au-Pd', 'Catálisis', 8.5, 'Aleación bimetálica catalítica', '2021-04-25', 4500000, 'Desarrollo'),
-('Nanopartículas Magnéticas', 'Nanopartícula', 'Fe3O4', 'Medicina', 12.0, 'Magnetita para imagen médica', '2019-09-08', 850000, 'Producción'),
-('Quantum Dots Grafeno', 'Quantum Dots', 'C-O', 'Electrónica', 3.5, 'GQDs fluorescentes biocompatibles', '2021-07-14', 2800000, 'Investigación'),
-('Nanotubos de TiO2', 'Nanotubos', 'TiO2', 'Ambiental', 8.0, 'TNTs para purificación de agua', '2020-10-20', 680000, 'Producción'),
-('Nanopartículas de Paladio', 'Nanopartícula', 'Pd', 'Catálisis', 6.5, 'PdNPs para hidrogenación', '2019-02-28', 5200000, 'Producción'),
-('Nanocompuesto Ag-ZnO', 'Nanocompuesto', 'Ag-ZnO', 'Ambiental', 28.0, 'Híbrido antibacterial fotocatalítico', '2021-01-15', 1250000, 'Desarrollo'),
-('Grafeno Dopado-N', 'Grafeno', 'C-N', 'Energía', 1.5, 'N-Graphene para baterías Li-ion', '2020-06-05', 1850000, 'Desarrollo'),
-('Nanopartículas Cu2O', 'Nanopartícula', 'Cu2O', 'Catálisis', 42.0, 'Óxido cuproso fotocatalítico', '2021-09-12', 380000, 'Investigación'),
-('Quantum Dots InP', 'Quantum Dots', 'InP', 'Electrónica', 4.8, 'QDs libres de cadmio para LEDs', '2021-11-22', 4800000, 'Investigación'),
-('Nanopartículas Pt', 'Nanopartícula', 'Pt', 'Catálisis', 3.2, 'PtNPs para celdas de combustible', '2018-12-10', 8500000, 'Producción'),
-('Nanocompuesto CNT-Grafeno', 'Nanocompuesto', 'C-C', 'Electrónica', 5.0, 'Híbrido conductor de alta área', '2020-08-18', 2200000, 'Desarrollo'),
-('Nanopartículas CeO2', 'Nanopartícula', 'CeO2', 'Farmacéutica', 18.0, 'Ceria nanozyme antioxidante', '2021-03-30', 1650000, 'Desarrollo'),
-('Nanotubos BN', 'Nanotubos', 'BN', 'Electrónica', 2.5, 'BNNTs aislantes térmicos', '2020-12-08', 3500000, 'Investigación'),
-('Nanopartículas Au-Ag', 'Nanocompuesto', 'Au-Ag', 'Medicina', 22.0, 'Aleación plasmónica para biosensado', '2021-05-17', 3200000, 'Desarrollo');
+INSERT INTO Nanomateriales (Nombre_Nanomaterial, Tipo_Nanomaterial, Composicion_Quimica, Aplicacion, Stock, Tamanio_Promedio_nm, Descripcion, Fecha_Desarrollo, Costo_Estimado_Gramo, Estado_Desarrollo) VALUES
+('Nanopartículas de Oro', 'Nanopartícula', 'Au', 'Medicina', 45.250, 15.5, 'NPs de oro para terapia fototérmica', '2019-05-10', 2500000, 'Producción'),
+('Nanotubos de Carbono', 'Nanotubos', 'C', 'Electrónica', 22.150, 1.2, 'CNTs de pared múltiple conductores', '2018-08-15', 1800000, 'Producción'),
+('Grafeno Reducido', 'Grafeno', 'C', 'Energía', 185.750, 0.8, 'rGO para supercapacitores', '2020-03-22', 950000, 'Producción'),
+('Quantum Dots CdSe', 'Quantum Dots', 'CdSe', 'Electrónica', 12.500, 5.2, 'QDs emisores para displays', '2019-11-30', 3200000, 'Desarrollo'),
+('Nanopartículas de Plata', 'Nanopartícula', 'Ag', 'Medicina', 95.300, 25.0, 'AgNPs antibacterianas', '2018-06-18', 1500000, 'Producción'),
+('Óxido de Zinc Nano', 'Nanopartícula', 'ZnO', 'Catálisis', 210.450, 35.0, 'ZnO para fotocatálisis', '2020-01-12', 450000, 'Producción'),
+('Nanocompuesto Au-Pd', 'Nanocompuesto', 'Au-Pd', 'Catálisis', 18.750, 8.5, 'Aleación bimetálica catalítica', '2021-04-25', 4500000, 'Desarrollo'),
+('Nanopartículas Magnéticas', 'Nanopartícula', 'Fe3O4', 'Medicina', 35.200, 12.0, 'Magnetita para imagen médica', '2019-09-08', 850000, 'Producción'),
+('Quantum Dots Grafeno', 'Quantum Dots', 'C-O', 'Electrónica', 8.900, 3.5, 'GQDs fluorescentes biocompatibles', '2021-07-14', 2800000, 'Investigación'),
+('Nanotubos de TiO2', 'Nanotubos', 'TiO2', 'Ambiental', 125.600, 8.0, 'TNTs para purificación de agua', '2020-10-20', 680000, 'Producción'),
+('Nanopartículas de Paladio', 'Nanopartícula', 'Pd', 'Catálisis', 28.350, 6.5, 'PdNPs para hidrogenación', '2019-02-28', 5200000, 'Producción'),
+('Nanocompuesto Ag-ZnO', 'Nanocompuesto', 'Ag-ZnO', 'Ambiental', 65.800, 28.0, 'Híbrido antibacterial fotocatalítico', '2021-01-15', 1250000, 'Desarrollo'),
+('Grafeno Dopado-N', 'Grafeno', 'C-N', 'Energía', 42.100, 1.5, 'N-Graphene para baterías Li-ion', '2020-06-05', 1850000, 'Desarrollo'),
+('Nanopartículas Cu2O', 'Nanopartícula', 'Cu2O', 'Catálisis', 15.750, 42.0, 'Óxido cuproso fotocatalítico', '2021-09-12', 380000, 'Investigación'),
+('Quantum Dots InP', 'Quantum Dots', 'InP', 'Electrónica', 7.250, 4.8, 'QDs libres de cadmio para LEDs', '2021-11-22', 4800000, 'Investigación'),
+('Nanopartículas Pt', 'Nanopartícula', 'Pt', 'Catálisis', 12.100, 3.2, 'PtNPs para celdas de combustible', '2018-12-10', 8500000, 'Producción'),
+('Nanocompuesto CNT-Grafeno', 'Nanocompuesto', 'C-C', 'Electrónica', 33.500, 5.0, 'Híbrido conductor de alta área', '2020-08-18', 2200000, 'Desarrollo'),
+('Nanopartículas CeO2', 'Nanopartícula', 'CeO2', 'Farmacéutica', 25.800, 18.0, 'Ceria nanozyme antioxidante', '2021-03-30', 1650000, 'Desarrollo'),
+('Nanotubos BN', 'Nanotubos', 'BN', 'Electrónica', 5.500, 2.5, 'BNNTs aislantes térmicos', '2020-12-08', 3500000, 'Investigación'),
+('Nanopartículas Au-Ag', 'Nanocompuesto', 'Au-Ag', 'Medicina', 19.300, 22.0, 'Aleación plasmónica para biosensado', '2021-05-17', 3200000, 'Desarrollo');
 
 -- EQUIPAMIENTO
 INSERT INTO Equipamiento (Nombre_Equipo, Tipo_Equipo, Modelo, Numero_Serie, Fabricante, ID_Responsable, Fecha_Adquisicion, Costo_Adquisicion, Ubicacion, Estado_Equipo, Frecuencia_Mantenimiento_Dias) VALUES
@@ -305,7 +305,7 @@ INSERT INTO Lotes_Nanomateriales (ID_Nanomaterial, ID_Orden, Cantidad_Producida,
 (10, 19, NULL, 'g', '2023-10-07', '2025-10-07', 'En-Proceso', 'Disponible'),
 (3, 20, NULL, 'g', '2023-10-23', '2025-10-23', 'Planificado', 'Disponible');
 
--- AUDITORIA_INVENTARIO
+-- AUDITORIA_INVENTARIO reactivos
 INSERT INTO Auditoria_Inventario (ID_Inventario, ID_Reactivo, Operacion, Cantidad_Anterior, Cantidad_Nueva, Usuario, Fecha_Operacion, Motivo) VALUES
 (1, 1, 'UPDATE', 28.000, 25.500, 'lab_user01', '2023-01-10 08:30:00', 'Consumo para Orden 1'),
 (6, 6, 'UPDATE', 43.200, 42.000, 'lab_user01', '2023-01-10 09:00:00', 'Consumo para Orden 1'),
@@ -327,3 +327,51 @@ INSERT INTO Auditoria_Inventario (ID_Inventario, ID_Reactivo, Operacion, Cantida
 (12, 12, 'UPDATE', 45.000, 37.000, 'lab_user04', '2023-05-08 09:30:00', 'Consumo para Orden 9'),
 (7, 7, 'UPDATE', 120.000, 119.400, 'lab_user04', '2023-05-08 10:30:00', 'Consumo para Orden 9'),
 (18, 18, 'INSERT', NULL, 8.500, 'lab_admin', '2024-08-30 14:00:00', 'Nuevo ingreso de inventario - Lote GO2024-003');
+
+
+-- AUDITORIA_CONSUMO_NANOMATERIALES
+INSERT INTO Auditoria_Consumo_Nanomateriales (ID_Nanomaterial, ID_Empleado_Solicitante, Cantidad_Consumida, Fecha_Consumo, Observaciones) VALUES
+(1, 3, 2.500, '2024-01-15 09:30:00', 'Consumo para experimento de catálisis'),
+(2, 7, 1.250, '2024-01-16 10:15:00', 'Pruebas de conductividad eléctrica'),
+(5, 10, 3.750, '2024-01-17 14:20:00', 'Estudio de propiedades antibacterianas'),
+(3, 5, 5.000, '2024-01-18 11:45:00', 'Desarrollo de supercapacitores'),
+(8, 12, 1.800, '2024-01-19 08:30:00', 'Pruebas de imagen médica MRI'),
+(6, 4, 8.500, '2024-01-20 13:15:00', 'Experimento de fotocatálisis'),
+(11, 9, 0.750, '2024-01-21 16:40:00', 'Catálisis de hidrogenación'),
+(4, 14, 2.100, '2024-01-22 10:00:00', 'Desarrollo de displays LED'),
+(10, 6, 6.250, '2024-01-23 15:20:00', 'Purificación de aguas residuales'),
+(7, 1, 1.500, '2024-01-24 09:45:00', 'Síntesis de catalizadores bimetálicos'),
+(12, 11, 4.300, '2024-01-25 12:30:00', 'Estudio de nanocompuestos híbridos'),
+(9, 8, 0.900, '2024-01-26 14:50:00', 'Investigación en bioimagen'),
+(13, 2, 3.200, '2024-01-27 11:10:00', 'Desarrollo de baterías Li-ion'),
+(16, 13, 0.450, '2024-01-28 17:25:00', 'Catálisis para celdas de combustible'),
+(15, 15, 1.100, '2024-01-29 10:35:00', 'Síntesis de QDs libres de cadmio'),
+(18, 16, 2.750, '2024-01-30 13:45:00', 'Estudio de nanozymes antioxidantes'),
+(17, 18, 1.900, '2024-01-31 15:15:00', 'Desarrollo de materiales compuestos'),
+(14, 17, 4.600, '2024-02-01 09:20:00', 'Fotocatálisis con óxido cuproso'),
+(19, 19, 0.350, '2024-02-02 16:00:00', 'Investigación en aislamiento térmico'),
+(20, 20, 1.250, '2024-02-03 14:40:00', 'Desarrollo de biosensores plasmónicos');
+
+
+-- AUDITORIA_INVENTARIO_NANOMATERIALES
+INSERT INTO Auditoria_Inventario_Nanomateriales (ID_Nanomaterial, Operacion, Cantidad_Anterior, Cantidad_Nueva, Usuario, Motivo) VALUES
+(1, 'UPDATE', 47.750, 45.250, 'lab_user01', 'Consumo para experimento de catálisis'),
+(2, 'UPDATE', 23.400, 22.150, 'lab_user07', 'Pruebas de conductividad eléctrica'),
+(5, 'UPDATE', 99.050, 95.300, 'lab_user10', 'Estudio de propiedades antibacterianas'),
+(3, 'UPDATE', 190.750, 185.750, 'lab_user05', 'Desarrollo de supercapacitores'),
+(8, 'UPDATE', 37.000, 35.200, 'lab_user12', 'Pruebas de imagen médica MRI'),
+(6, 'UPDATE', 218.950, 210.450, 'lab_user04', 'Experimento de fotocatálisis'),
+(11, 'UPDATE', 29.100, 28.350, 'lab_user09', 'Catálisis de hidrogenación'),
+(4, 'UPDATE', 14.600, 12.500, 'lab_user14', 'Desarrollo de displays LED'),
+(10, 'UPDATE', 131.850, 125.600, 'lab_user06', 'Purificación de aguas residuales'),
+(7, 'UPDATE', 20.250, 18.750, 'lab_user01', 'Síntesis de catalizadores bimetálicos'),
+(12, 'UPDATE', 70.100, 65.800, 'lab_user11', 'Estudio de nanocompuestos híbridos'),
+(9, 'UPDATE', 9.800, 8.900, 'lab_user08', 'Investigación en bioimagen'),
+(13, 'UPDATE', 45.300, 42.100, 'lab_user02', 'Desarrollo de baterías Li-ion'),
+(16, 'UPDATE', 12.550, 12.100, 'lab_user13', 'Catálisis para celdas de combustible'),
+(15, 'UPDATE', 8.350, 7.250, 'lab_user15', 'Síntesis de QDs libres de cadmio'),
+(18, 'UPDATE', 28.550, 25.800, 'lab_user16', 'Estudio de nanozymes antioxidantes'),
+(17, 'UPDATE', 35.400, 33.500, 'lab_user18', 'Desarrollo de materiales compuestos'),
+(14, 'UPDATE', 20.350, 15.750, 'lab_user17', 'Fotocatálisis con óxido cuproso'),
+(19, 'UPDATE', 5.850, 5.500, 'lab_user19', 'Investigación en aislamiento térmico'),
+(20, 'UPDATE', 20.550, 19.300, 'lab_user20', 'Desarrollo de biosensores plasmónicos');

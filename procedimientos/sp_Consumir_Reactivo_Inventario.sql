@@ -14,13 +14,29 @@ BEGIN
 	BEGIN TRY
 		BEGIN TRANSACTION;
 
+		-- DEPURACIÓN: Ver qué estamos recibiendo
+		PRINT 'Parámetros recibidos:';
+		PRINT 'ID_Orden: ' + CAST(@ID_Orden AS NVARCHAR(10));
+		PRINT 'ID_Reactivo: ' + CAST(@ID_Reactivo AS NVARCHAR(10));
+		PRINT 'ID_Empleado: ' + CAST(@ID_Empleado_Operacion AS NVARCHAR(10));
+
+		DECLARE @EstadoActual NVARCHAR(30);
+		SELECT @EstadoActual = Estado_Orden 
+		FROM Ordenes_Sintesis 
+		WHERE ID_Orden = @ID_Orden;
+		
+		PRINT 'Estado actual de la orden: ' + ISNULL(@EstadoActual, 'NO ENCONTRADA');
+
 		-- VALIDACIONES --
 		-- Validar que la orden existe y está en proceso
 		IF NOT EXISTS (SELECT 1 FROM Ordenes_Sintesis WHERE ID_Orden = @ID_Orden AND Estado_Orden IN ('Planificada','En Proceso'))
 		BEGIN	
+			PRINT 'FALLA VALIDACIÓN: Orden no existe o estado no válido';
 			RAISERROR('La orden no existe o no está en estado valido',16,1);	
 			RETURN;
 		END
+
+		
 
 		-- Validar si el reactivo existe
 		IF NOT EXISTS (SELECT 1 FROM Reactivos WHERE ID_Reactivo = @ID_Reactivo)
@@ -28,6 +44,7 @@ BEGIN
 			RAISERROR('El reactivo no existe',16,1);
 			RETURN;
 		END
+		PRINT 'Validación de reactivo PASADA';
 
 		-- Validar si el empleado existe y esta activo
 		IF NOT EXISTS (SELECT 1 FROM Empleados WHERE ID_Empleado = @ID_Empleado_Operacion AND Estado='Activo')
@@ -35,6 +52,7 @@ BEGIN
 			RAISERROR('El empleado no esxiste o no está activo',16,1);
 			RETURN;
 		END
+		PRINT 'Validación de empleado PASADA';
 
 		-- Si no se especifica inventario, buscar el lote más antiguo disponible (FIFO)
 		IF @ID_Inventario IS NULL
@@ -52,6 +70,8 @@ BEGIN
 			IF @ID_Inventario IS NULL
 				RAISERROR('No hay lotes disponibles con suficiente cantidad del reactivo especificado',16,1);
 		END
+
+		PRINT 'Búsqueda de inventario PASADA';
 
 		-- verificamos disponibilidad del reactivo
 		DECLARE @CantidadActual DECIMAL(10,4);

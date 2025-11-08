@@ -92,13 +92,13 @@ CREATE TABLE Nanomateriales (
     Tipo_Nanomaterial NVARCHAR(50) CHECK (Tipo_Nanomaterial IN ('Nanopartícula', 'Nanotubos', 'Grafeno', 'Quantum Dots', 'Nanocompuesto')),
     Composicion_Quimica NVARCHAR(200),
     Aplicacion NVARCHAR(100) CHECK (Aplicacion IN ('Catálisis', 'Electrónica', 'Medicina', 'Farmacéutica', 'Energía', 'Ambiental')),
+    Stock DECIMAL(10,3) NOT NULL,
     Tamanio_Promedio_nm DECIMAL(10,3),
     Descripcion NVARCHAR(500),
     Fecha_Desarrollo DATE,
     Costo_Estimado_Gramo DECIMAL(10,2),
     Estado_Desarrollo NVARCHAR(30) CHECK (Estado_Desarrollo IN ('Investigación', 'Desarrollo', 'Producción', 'Descontinuado'))
 );
-
 ---------------------------------------------------------
 -- 7. Registro de equipos de laboratorio
 
@@ -230,3 +230,26 @@ CREATE TABLE Auditoria_Inventario (
     Fecha_Operacion DATETIME DEFAULT GETDATE(),
     Motivo NVARCHAR(200)
 );
+
+-- 15. consumo de nanomateriales
+CREATE TABLE Auditoria_Consumo_Nanomateriales (
+    ID_Consumo INT PRIMARY KEY IDENTITY(1,1),
+    ID_Nanomaterial INT FOREIGN KEY REFERENCES Nanomateriales(ID_Nanomaterial),
+    ID_Empleado_Solicitante INT FOREIGN KEY REFERENCES Empleados(ID_Empleado),
+    Cantidad_Consumida DECIMAL(10,3) NOT NULL CHECK (Cantidad_Consumida > 0),
+    Fecha_Consumo DATETIME DEFAULT GETDATE(),
+    Observaciones NVARCHAR(500)
+);
+
+--------------------------------------------------------------
+-- 16. log de cambios en inventario
+CREATE TABLE Auditoria_Inventario_Nanomateriales (
+    ID_Auditoria INT PRIMARY KEY IDENTITY(1,1),
+    ID_Nanomaterial INT,
+    Operacion NVARCHAR(20) CHECK (Operacion IN ('INSERT', 'UPDATE', 'DELETE')),
+    Cantidad_Anterior DECIMAL(10,3),
+    Cantidad_Nueva DECIMAL(10,3),
+    Usuario NVARCHAR(100) DEFAULT SYSTEM_USER,
+    Fecha_Operacion DATETIME DEFAULT GETDATE(),
+    Motivo NVARCHAR(200)
+  );
