@@ -1,0 +1,4 @@
+[
+    { "id_lote": 1, "fecha_analisis": -1 },
+    { "name": "idx_lote_fecha", "background": true }
+]

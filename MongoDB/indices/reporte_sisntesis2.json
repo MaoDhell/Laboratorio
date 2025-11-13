@@ -1,0 +1,7 @@
+[
+    { "titulo": "text", "resumen_ejecutivo": "text" },
+  { 
+    "name": "idx_text_search",
+    "default_language": "spanish"
+  }
+]
