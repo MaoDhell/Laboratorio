@@ -1,0 +1,577 @@
+[
+  {
+    "id_orden": 1,
+    "id_nanomaterial": 1,
+    "fecha_analisis": {"$date": "2023-01-13T10:00:00.000Z"},
+    "tecnica": "UV-Vis",
+    "id_equipo": 3,
+    "operador": "Jorge Hernández",
+    "parametros": {
+      "rango_longitud_onda": [300, 800],
+      "resolucion": 1.0,
+      "medio": "Agua",
+      "concentracion_mg_ml": 0.05
+    },
+    "resultados": {
+      "pico_plasmónico_nm": 520,
+      "absorbancia_maxima": 2.34,
+      "ancho_banda_nm": 45,
+      "coeficiente_extincion": 8.9e8
+    },
+    "espectro_data": [
+      {"longitud_onda": 400, "absorbancia": 0.12},
+      {"longitud_onda": 450, "absorbancia": 0.85},
+      {"longitud_onda": 500, "absorbancia": 1.98},
+      {"longitud_onda": 520, "absorbancia": 2.34},
+      {"longitud_onda": 550, "absorbancia": 1.45},
+      {"longitud_onda": 600, "absorbancia": 0.32}
+    ],
+    "interpretacion": "Nanopartículas de oro con pico plasmónico característico a 520 nm, indicando partículas esféricas de ~15 nm",
+    "archivo_raw": "UV_VIS_ORD001_20230113.csv"
+  },
+  {
+    "id_orden": 2,
+    "id_nanomaterial": 2,
+    "fecha_analisis": {"$date": "2023-01-23T14:30:00.000Z"},
+    "tecnica": "Raman",
+    "id_equipo": 11,
+    "operador": "Claudia Vargas",
+    "parametros": {
+      "laser_longitud_nm": 532,
+      "potencia_mw": 10,
+      "tiempo_exposicion_s": 30,
+      "acumulaciones": 3
+    },
+    "resultados": {
+      "banda_D_cm": 1350,
+      "banda_G_cm": 1580,
+      "banda_2D_cm": 2700,
+      "ratio_ID_IG": 0.95,
+      "calidad_cristalina": "Alta"
+    },
+    "espectro_data": [
+      {"desplazamiento_raman": 1350, "intensidad": 8500},
+      {"desplazamiento_raman": 1580, "intensidad": 8950},
+      {"desplazamiento_raman": 2700, "intensidad": 3200}
+    ],
+    "interpretacion": "CNTs con estructura cristalina bien definida, ratio D/G bajo indica pocos defectos",
+    "archivo_raw": "RAMAN_ORD002_20230123.spc"
+  },
+  {
+    "id_orden": 3,
+    "id_nanomaterial": 3,
+    "fecha_analisis": {"$date": "2023-02-08T11:15:00.000Z"},
+    "tecnica": "FTIR",
+    "id_equipo": 18,
+    "operador": "Claudia Vargas",
+    "parametros": {
+      "rango_numero_onda": [400, 4000],
+      "resolucion_cm": 4,
+      "modo": "ATR",
+      "scans": 32
+    },
+    "resultados": {
+      "grupos_funcionales": ["C=C", "C-O", "O-H"],
+      "picos_principales_cm": [1580, 1220, 3400],
+      "grado_reduccion_porcentaje": 85.2
+    },
+    "espectro_data": [
+      {"numero_onda": 3400, "transmitancia": 45.2},
+      {"numero_onda": 1720, "transmitancia": 15.8},
+      {"numero_onda": 1580, "transmitancia": 78.9},
+      {"numero_onda": 1220, "transmitancia": 62.3}
+    ],
+    "interpretacion": "Grafeno reducido con eliminación efectiva de grupos oxigenados, confirmado por disminución de pico C=O",
+    "archivo_raw": "FTIR_ORD003_20230208.sp"
+  },
+  {
+    "id_orden": 5,
+    "id_nanomaterial": 6,
+    "fecha_analisis": {"$date": "2023-03-08T09:45:00.000Z"},
+    "tecnica": "XRD",
+    "id_equipo": 5,
+    "operador": "Ana Rodríguez",
+    "parametros": {
+      "radiacion": "Cu Kα",
+      "longitud_onda_angstrom": 1.5406,
+      "rango_2theta": [10, 80],
+      "paso": 0.02,
+      "tiempo_paso_s": 1
+    },
+    "resultados": {
+      "fase_cristalina": "Wurtzita hexagonal",
+      "parametros_red": {"a": 3.249, "c": 5.206},
+      "tamano_cristalito_nm": 34.8,
+      "picos_principales_2theta": [31.77, 34.42, 36.25, 47.54, 56.60]
+    },
+    "espectro_data": [
+      {"angulo_2theta": 31.77, "intensidad": 8950, "plano_hkl": "(100)"},
+      {"angulo_2theta": 34.42, "intensidad": 12500, "plano_hkl": "(002)"},
+      {"angulo_2theta": 36.25, "intensidad": 9800, "plano_hkl": "(101)"}
+    ],
+    "interpretacion": "ZnO nanoestructurado con estructura cristalina wurtzita bien definida",
+    "archivo_raw": "XRD_ORD005_20230308.raw"
+  },
+  {
+    "id_orden": 1,
+    "id_nanomaterial": 1,
+    "fecha_analisis": {"$date": "2023-01-13T15:20:00.000Z"},
+    "tecnica": "DLS",
+    "id_equipo": 9,
+    "operador": "Claudia Vargas",
+    "parametros": {
+      "temperatura_c": 25,
+      "angulo_deteccion": 173,
+      "tiempo_medicion_s": 120,
+      "medio_dispersion": "Agua Milli-Q"
+    },
+    "resultados": {
+      "diametro_hidrodinamico_nm": 18.5,
+      "indice_polidispersidad": 0.08,
+      "potencial_zeta_mv": -32.4,
+      "distribucion": "Monomodal"
+    },
+    "distribucion_tamanios": [
+      {"diametro_nm": 15.2, "porcentaje_intensidad": 12.5},
+      {"diametro_nm": 18.5, "porcentaje_intensidad": 78.3},
+      {"diametro_nm": 22.1, "porcentaje_intensidad": 9.2}
+    ],
+    "interpretacion": "Dispersión monomodal estrecha con potencial zeta negativo indicando buena estabilidad coloidal",
+    "archivo_raw": "DLS_ORD001_20230113.dts"
+  },
+  {
+    "id_orden": 4,
+    "id_nanomaterial": 5,
+    "fecha_analisis": {"$date": "2023-02-21T10:30:00.000Z"},
+    "tecnica": "UV-Vis",
+    "id_equipo": 3,
+    "operador": "Jorge Hernández",
+    "parametros": {
+      "rango_longitud_onda": [300, 700],
+      "resolucion": 0.5,
+      "medio": "Etanol",
+      "concentracion_mg_ml": 0.03
+    },
+    "resultados": {
+      "pico_plasmónico_nm": 410,
+      "absorbancia_maxima": 1.89,
+      "ancho_banda_nm": 52,
+      "coeficiente_extincion": 7.2e8
+    },
+    "espectro_data": [
+      {"longitud_onda": 350, "absorbancia": 0.15},
+      {"longitud_onda": 380, "absorbancia": 0.95},
+      {"longitud_onda": 410, "absorbancia": 1.89},
+      {"longitud_onda": 450, "absorbancia": 1.12},
+      {"longitud_onda": 500, "absorbancia": 0.28}
+    ],
+    "interpretacion": "Nanopartículas de plata con resonancia plasmónica a 410 nm, tamaño estimado ~25 nm",
+    "archivo_raw": "UV_VIS_ORD004_20230221.csv"
+  },
+  {
+    "id_orden": 7,
+    "id_nanomaterial": 1,
+    "fecha_analisis": {"$date": "2023-04-13T13:45:00.000Z"},
+    "tecnica": "XPS",
+    "id_equipo": 2,
+    "operador": "Ana Rodríguez",
+    "parametros": {
+      "fuente_rayos_x": "Al Kα",
+      "energia_foton_ev": 1486.6,
+      "presion_camara_mbar": 1e-9,
+      "area_analisis_mm2": 0.5
+    },
+    "resultados": {
+      "elementos_detectados": ["Au", "C", "O", "N"],
+      "composicion_atomica": {
+        "Au": 85.2,
+        "C": 10.5,
+        "O": 3.1,
+        "N": 1.2
+      },
+      "estado_oxidacion_Au": "Au0",
+      "energia_enlace_Au4f7_ev": 84.0
+    },
+    "picos_alta_resolucion": [
+      {"elemento": "Au", "orbital": "4f7/2", "energia_ev": 84.0, "fwhm": 0.85},
+      {"elemento": "Au", "orbital": "4f5/2", "energia_ev": 87.7, "fwhm": 0.85}
+    ],
+    "interpretacion": "Oro metálico puro (Au0) sin óxidos, carbono adventicio superficial mínimo",
+    "archivo_raw": "XPS_ORD007_20230413.vms"
+  },
+  {
+    "id_orden": 10,
+    "id_nanomaterial": 3,
+    "fecha_analisis": {"$date": "2023-05-25T16:00:00.000Z"},
+    "tecnica": "Raman",
+    "id_equipo": 11,
+    "operador": "Isabella Silva",
+    "parametros": {
+      "laser_longitud_nm": 532,
+      "potencia_mw": 5,
+      "tiempo_exposicion_s": 20,
+      "acumulaciones": 5
+    },
+    "resultados": {
+      "banda_D_cm": 1348,
+      "banda_G_cm": 1595,
+      "banda_2D_cm": 2690,
+      "ratio_ID_IG": 0.12,
+      "calidad_cristalina": "Muy Alta"
+    },
+    "espectro_data": [
+      {"desplazamiento_raman": 1348, "intensidad": 1200},
+      {"desplazamiento_raman": 1595, "intensidad": 10000},
+      {"desplazamiento_raman": 2690, "intensidad": 4500}
+    ],
+    "interpretacion": "Grafeno reducido de excelente calidad con ratio D/G muy bajo, indicando alta conductividad eléctrica",
+    "archivo_raw": "RAMAN_ORD010_20230525.spc"
+  },
+  {
+    "id_orden": 11,
+    "id_nanomaterial": 16,
+    "fecha_analisis": {"$date": "2023-06-08T11:30:00.000Z"},
+    "tecnica": "Electroquimica-CV",
+    "id_equipo": 15,
+    "operador": "Miguel Pérez",
+    "parametros": {
+      "electrolito": "H2SO4 0.5M",
+      "electrodo_referencia": "Ag/AgCl",
+      "velocidad_barrido_mv_s": 50,
+      "rango_potencial_v": [-0.2, 1.2]
+    },
+    "resultados": {
+      "area_superficie_electroquimica_m2_g": 52.3,
+      "corriente_pico_oxidacion_ma": 8.5,
+      "potencial_oxidacion_v": 0.75,
+      "actividad_ORR": "Excelente",
+      "estabilidad_ciclos": 1000
+    },
+    "curva_cv": [
+      {"potencial_v": 0.0, "corriente_ma": 0.1},
+      {"potencial_v": 0.5, "corriente_ma": 3.2},
+      {"potencial_v": 0.75, "corriente_ma": 8.5},
+      {"potencial_v": 1.0, "corriente_ma": 5.1}
+    ],
+    "interpretacion": "PtNPs con excelente actividad electrocatalítica para ORR, ideal para celdas de combustible",
+    "archivo_raw": "CV_ORD011_20230608.txt"
+  },
+  {
+    "id_orden": 6,
+    "id_nanomaterial": 8,
+    "fecha_analisis": {"$date": "2023-03-23T14:15:00.000Z"},
+    "tecnica": "VSM",
+    "id_equipo": 15,
+    "operador": "Miguel Pérez",
+    "parametros": {
+      "temperatura_k": 300,
+      "campo_maximo_oe": 15000,
+      "masa_muestra_mg": 5.2
+    },
+    "resultados": {
+      "magnetizacion_saturacion_emu_g": 68.5,
+      "remanencia_emu_g": 5.2,
+      "coercitividad_oe": 120,
+      "tipo_magnetico": "Superparamagnético"
+    },
+    "curva_histeresis": [
+      {"campo_oe": -15000, "magnetizacion_emu_g": -68.5},
+      {"campo_oe": -120, "magnetizacion_emu_g": -5.2},
+      {"campo_oe": 0, "magnetizacion_emu_g": 0},
+      {"campo_oe": 120, "magnetizacion_emu_g": 5.2},
+      {"campo_oe": 15000, "magnetizacion_emu_g": 68.5}
+    ],
+    "interpretacion": "Magnetita con comportamiento superparamagnético, ideal para aplicaciones de imagen médica",
+    "archivo_raw": "VSM_ORD006_20230323.dat"
+  },
+  {
+    "id_orden": 8,
+    "id_nanomaterial": 11,
+    "fecha_analisis": {"$date": "2023-04-28T10:00:00.000Z"},
+    "tecnica": "XRD",
+    "id_equipo": 5,
+    "operador": "Ana Rodríguez",
+    "parametros": {
+      "radiacion": "Cu Kα",
+      "longitud_onda_angstrom": 1.5406,
+      "rango_2theta": [30, 90],
+      "paso": 0.02,
+      "tiempo_paso_s": 2
+    },
+    "resultados": {
+      "fase_cristalina": "Paladio FCC",
+      "parametro_red_angstrom": 3.891,
+      "tamano_cristalito_nm": 6.8,
+      "picos_principales_2theta": [40.12, 46.66, 68.13, 82.11]
+    },
+    "espectro_data": [
+      {"angulo_2theta": 40.12, "intensidad": 15000, "plano_hkl": "(111)"},
+      {"angulo_2theta": 46.66, "intensidad": 8500, "plano_hkl": "(200)"},
+      {"angulo_2theta": 68.13, "intensidad": 7200, "plano_hkl": "(220)"}
+    ],
+    "interpretacion": "Nanopartículas de Pd con estructura FCC bien cristalizada, tamaño nanométrico confirmado",
+    "archivo_raw": "XRD_ORD008_20230428.raw"
+  },
+  {
+    "id_orden": 12,
+    "id_nanomaterial": 5,
+    "fecha_analisis": {"$date": "2023-06-23T15:30:00.000Z"},
+    "tecnica": "Antibacterial-Test",
+    "id_equipo": 3,
+    "operador": "Diana Torres",
+    "parametros": {
+      "bacteria": "E. coli",
+      "cepa": "ATCC 25922",
+      "concentracion_np_ug_ml": 50,
+      "tiempo_contacto_h": 24,
+      "medio_cultivo": "LB Broth"
+    },
+    "resultados": {
+      "inhibicion_porcentaje": 99.8,
+      "MIC_ug_ml": 12.5,
+      "MBC_ug_ml": 25.0,
+      "halo_inhibicion_mm": 18.5,
+      "eficacia": "Muy Alta"
+    },
+    "ensayos_adicionales": {
+      "S_aureus_inhibicion": 99.5,
+      "P_aeruginosa_inhibicion": 97.2,
+      "citotoxicidad_celulas_mamifero": "Baja"
+    },
+    "interpretacion": "AgNPs con potente actividad antibacteriana de amplio espectro, baja citotoxicidad",
+    "archivo_raw": "ANTIBAC_ORD012_20230623.xlsx"
+  },
+  {
+    "id_orden": 13,
+    "id_nanomaterial": 7,
+    "fecha_analisis": {"$date": "2023-07-14T12:00:00.000Z"},
+    "tecnica": "XPS",
+    "id_equipo": 2,
+    "operador": "Ana Rodríguez",
+    "parametros": {
+      "fuente_rayos_x": "Al Kα",
+      "energia_foton_ev": 1486.6,
+      "presion_camara_mbar": 5e-10,
+      "area_analisis_mm2": 0.3
+    },
+    "resultados": {
+      "elementos_detectados": ["Au", "Pd", "C", "O"],
+      "composicion_atomica": {
+        "Au": 48.5,
+        "Pd": 46.8,
+        "C": 3.2,
+        "O": 1.5
+      },
+      "ratio_Au_Pd": 1.04,
+      "aleacion_homogenea": true
+    },
+    "picos_alta_resolucion": [
+      {"elemento": "Au", "orbital": "4f7/2", "energia_ev": 83.9, "fwhm": 0.9},
+      {"elemento": "Pd", "orbital": "3d5/2", "energia_ev": 335.2, "fwhm": 1.1}
+    ],
+    "interpretacion": "Nanocompuesto Au-Pd con aleación homogénea 1:1, ambos metales en estado metálico",
+    "archivo_raw": "XPS_ORD013_20230714.vms"
+  },
+  {
+    "id_orden": 15,
+    "id_nanomaterial": 6,
+    "fecha_analisis": {"$date": "2023-08-11T10:45:00.000Z"},
+    "tecnica": "Fotocatalisis-Test",
+    "id_equipo": 3,
+    "operador": "Andrés Morales",
+    "parametros": {
+      "contaminante": "Azul de Metileno",
+      "concentracion_inicial_ppm": 10,
+      "masa_catalizador_mg": 50,
+      "volumen_solucion_ml": 100,
+      "fuente_luz": "UV 365nm",
+      "potencia_w": 15
+    },
+    "resultados": {
+      "degradacion_30min_porcentaje": 65.2,
+      "degradacion_60min_porcentaje": 89.5,
+      "degradacion_120min_porcentaje": 98.7,
+      "constante_velocidad_min": 0.038,
+      "eficiencia_cuantica": 12.5
+    },
+    "cinetica_degradacion": [
+      {"tiempo_min": 0, "concentracion_ppm": 10.0},
+      {"tiempo_min": 30, "concentracion_ppm": 3.48},
+      {"tiempo_min": 60, "concentracion_ppm": 1.05},
+      {"tiempo_min": 120, "concentracion_ppm": 0.13}
+    ],
+    "interpretacion": "ZnO nanoestructurado con excelente actividad fotocatalítica, cinética de pseudo-primer orden",
+    "archivo_raw": "PHOTO_ORD015_20230811.xlsx"
+  },
+  {
+    "id_orden": 14,
+    "id_nanomaterial": 2,
+    "fecha_analisis": {"$date": "2023-07-28T14:20:00.000Z"},
+    "tecnica": "Conductividad-Electrica",
+    "id_equipo": 15,
+    "operador": "Miguel Pérez",
+    "parametros": {
+      "metodo": "Cuatro puntas",
+      "temperatura_k": 298,
+      "espesor_pelicula_nm": 50,
+      "distancia_puntas_mm": 1.0
+    },
+    "resultados": {
+      "conductividad_s_m": 4.5e5,
+      "resistividad_ohm_m": 2.2e-6,
+      "resistencia_lamina_ohm_sq": 45,
+      "calidad_conductora": "Excelente"
+    },
+    "mediciones_multiples": [
+      {"posicion": 1, "conductividad": 4.48e5},
+      {"posicion": 2, "conductividad": 4.52e5},
+      {"posicion": 3, "conductividad": 4.49e5}
+    ],
+    "interpretacion": "CNTs con conductividad eléctrica muy alta, ideal para aplicaciones electrónicas",
+    "archivo_raw": "CONDUCT_ORD014_20230728.txt"
+  },
+  {
+    "id_orden": 16,
+    "id_nanomaterial": 1,
+    "fecha_analisis": {"$date": "2023-08-25T09:30:00.000Z"},
+    "tecnica": "SERS",
+    "id_equipo": 11,
+    "operador": "Isabella Silva",
+    "parametros": {
+      "laser_longitud_nm": 633,
+      "potencia_mw": 1,
+      "molecula_prueba": "Rodamina 6G",
+      "concentracion_m": 1e-9,
+      "tiempo_adquisicion_s": 10
+    },
+    "resultados": {
+      "factor_mejora": 1.2e7,
+      "limite_deteccion_m": 1e-12,
+      "reproducibilidad_rsd_porcentaje": 8.5,
+      "aplicabilidad_biosensado": "Excelente"
+    },
+    "picos_caracteristicos": [
+      {"raman_shift_cm": 612, "intensidad_relativa": 85},
+      {"raman_shift_cm": 773, "intensidad_relativa": 100},
+      {"raman_shift_cm": 1363, "intensidad_relativa": 92}
+    ],
+    "interpretacion": "AuNPs con alto factor de mejora SERS, potencial para biosensado ultrasensible",
+    "archivo_raw": "SERS_ORD016_20230825.spc"
+  },
+  {
+    "id_orden": 17,
+    "id_nanomaterial": 12,
+    "fecha_analisis": {"$date": "2023-09-09T11:45:00.000Z"},
+    "tecnica": "XRD",
+    "id_equipo": 5,
+    "operador": "Ana Rodríguez",
+    "parametros": {
+      "radiacion": "Cu Kα",
+      "longitud_onda_angstrom": 1.5406,
+      "rango_2theta": [20, 80],
+      "paso": 0.02,
+      "tiempo_paso_s": 1.5
+    },
+    "resultados": {
+      "fases_detectadas": ["ZnO wurtzita", "Ag FCC"],
+      "composicion_fases_porcentaje": {"ZnO": 75, "Ag": 25},
+      "tamano_cristalito_zno_nm": 28.5,
+      "tamano_cristalito_ag_nm": 22.1
+    },
+    "espectro_data": [
+      {"angulo_2theta": 31.77, "intensidad": 8500, "fase": "ZnO"},
+      {"angulo_2theta": 34.42, "intensidad": 11000, "fase": "ZnO"},
+      {"angulo_2theta": 38.12, "intensidad": 4200, "fase": "Ag"},
+      {"angulo_2theta": 44.30, "intensidad": 3100, "fase": "Ag"}
+    ],
+    "interpretacion": "Nanocompuesto Ag-ZnO híbrido con ambas fases cristalinas bien definidas",
+    "archivo_raw": "XRD_ORD017_20230909.raw"
+  },
+  {
+    "id_orden": 18,
+    "id_nanomaterial": 5,
+    "fecha_analisis": {"$date": "2023-09-23T13:00:00.000Z"},
+    "tecnica": "UV-Vis",
+    "id_equipo": 3,
+    "operador": "Jorge Hernández",
+    "parametros": {
+      "rango_longitud_onda": [300, 600],
+      "resolucion": 1.0,
+      "medio": "Agua",
+      "concentracion_mg_ml": 0.04
+    },
+    "resultados": {
+      "pico_plasmónico_nm": 405,
+      "absorbancia_maxima": 1.95,
+      "ancho_banda_nm": 48,
+      "forma_particula": "Esférica"
+    },
+    "espectro_data": [
+      {"longitud_onda": 350, "absorbancia": 0.18},
+      {"longitud_onda": 380, "absorbancia": 1.02},
+      {"longitud_onda": 405, "absorbancia": 1.95},
+      {"longitud_onda": 450, "absorbancia": 0.85}
+    ],
+    "interpretacion": "AgNPs con morfología esférica controlada, tamaño uniforme ~25 nm",
+    "archivo_raw": "UV_VIS_ORD018_20230923.csv"
+  },
+  {
+    "id_orden": 9,
+    "id_nanomaterial": 10,
+    "fecha_analisis": {"$date": "2023-05-11T15:45:00.000Z"},
+    "tecnica": "BET",
+    "id_equipo": 9,
+    "operador": "Valentina Rojas",
+    "parametros": {
+      "gas_adsorbato": "N2",
+      "temperatura_k": 77,
+      "rango_presion_relativa": [0.05, 0.35],
+      "desgasificacion_temp_c": 150,
+      "desgasificacion_tiempo_h": 3
+    },
+    "resultados": {
+      "area_superficial_bet_m2_g": 285.5,
+      "volumen_poro_total_cm3_g": 0.42,
+      "diametro_poro_promedio_nm": 8.2,
+      "tipo_isoterma": "IV",
+      "material_mesoporoso": true
+    },
+    "isoterma_adsorcion": [
+      {"p_p0": 0.1, "vol_adsorbido": 120},
+      {"p_p0": 0.3, "vol_adsorbido": 245},
+      {"p_p0": 0.5, "vol_adsorbido": 310},
+      {"p_p0": 0.9, "vol_adsorbido": 380}
+    ],
+    "interpretacion": "Nanotubos de TiO2 con alta área superficial y estructura mesoporosa, ideal para purificación",
+    "archivo_raw": "BET_ORD009_20230511.xlsx"
+  },
+  {
+    "id_orden": 3,
+    "id_nanomaterial": 3,
+    "fecha_analisis": {"$date": "2023-02-08T16:30:00.000Z"},
+    "tecnica": "TGA",
+    "id_equipo": 4,
+    "operador": "Ricardo Mendoza",
+    "parametros": {
+      "atmosfera": "Aire",
+      "flujo_gas_ml_min": 50,
+      "rango_temperatura_c": [25, 800],
+      "velocidad_calentamiento_c_min": 10,
+      "masa_inicial_mg": 8.5
+    },
+    "resultados": {
+      "perdida_peso_total_porcentaje": 15.2,
+      "temperatura_descomposicion_c": 450,
+      "residuo_carbonoso_porcentaje": 84.8,
+      "estabilidad_termica": "Alta"
+    },
+    "curva_tga": [
+      {"temperatura_c": 100, "peso_porcentaje": 98.5},
+      {"temperatura_c": 200, "peso_porcentaje": 96.2},
+      {"temperatura_c": 450, "peso_porcentaje": 85.0},
+      {"temperatura_c": 600, "peso_porcentaje": 84.8}
+    ],
+    "interpretacion": "Grafeno reducido con excelente estabilidad térmica, grupos funcionales residuales mínimos",
+    "archivo_raw": "TGA_ORD003_20230208.txt"
+  }
+]

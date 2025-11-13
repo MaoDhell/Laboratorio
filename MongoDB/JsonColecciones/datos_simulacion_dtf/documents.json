@@ -1,0 +1,803 @@
+[
+  {
+    "id_nanomaterial": 1,
+    "fecha_simulacion": {"$date": "2023-01-15T14:00:00.000Z"},
+    "tipo_calculo": "Optimización Geométrica",
+    "software": "Gaussian 16",
+    "metodo": "DFT",
+    "funcional": "B3LYP",
+    "base": "6-311G(d,p)",
+    "sistema": {
+      "formula": "Au38",
+      "num_atomos": 38,
+      "carga": 0,
+      "multiplicidad": 1,
+      "simetria": "Oh"
+    },
+    "resultados": {
+      "energia_total_hartree": -7498.245621,
+      "energia_homo_ev": -5.42,
+      "energia_lumo_ev": -3.18,
+      "gap_homo_lumo_ev": 2.24,
+      "momento_dipolar_debye": 0.0
+    },
+    "propiedades_opticas": {
+      "transiciones_principales": [
+        {"longitud_onda_nm": 520, "fuerza_oscilador": 0.85, "tipo": "LSPR"},
+        {"longitud_onda_nm": 350, "fuerza_oscilador": 0.32, "tipo": "Interband"}
+      ],
+      "coeficiente_absorcion_max": 2.8e5
+    },
+    "geometria_optimizada": {
+      "radio_promedio_nm": 1.05,
+      "coordinacion_promedio": 8.5,
+      "energia_enlace_au_au_kj_mol": 225
+    },
+    "tiempo_computacional_h": 48.5,
+    "archivo_output": "Au38_B3LYP_opt.log"
+  },
+  {
+    "id_nanomaterial": 2,
+    "fecha_simulacion": {"$date": "2023-01-25T10:00:00.000Z"},
+    "tipo_calculo": "Estructura Electrónica",
+    "software": "VASP",
+    "metodo": "DFT",
+    "funcional": "PBE",
+    "base": "PAW",
+    "sistema": {
+      "formula": "C240",
+      "num_atomos": 240,
+      "tipo_estructura": "Nanotubo (10,10)",
+      "diametro_nm": 1.356,
+      "longitud_nm": 2.46
+    },
+    "resultados": {
+      "energia_total_ev": -1896.542,
+      "energia_fermi_ev": 0.0,
+      "band_gap_ev": 0.0,
+      "tipo_conductor": "Metálico",
+      "densidad_estados_fermi": 0.85
+    },
+    "propiedades_electronicas": {
+      "conductividad_teorica_s_m": 1e7,
+      "movilidad_electronica_cm2_vs": 100000,
+      "longitud_libre_camino_medio_nm": 1000
+    },
+    "propiedades_mecanicas": {
+      "modulo_young_gpa": 1000,
+      "resistencia_traccion_gpa": 63,
+      "elongacion_ruptura_porcentaje": 12
+    },
+    "tiempo_computacional_h": 72.3,
+    "archivo_output": "CNT_10_10_PBE.xml"
+  },
+  {
+    "id_nanomaterial": 3,
+    "fecha_simulacion": {"$date": "2023-02-10T09:00:00.000Z"},
+    "tipo_calculo": "Propiedades Electrónicas",
+    "software": "Quantum ESPRESSO",
+    "metodo": "DFT",
+    "funcional": "PBE",
+    "base": "Plane Wave",
+    "sistema": {
+      "formula": "C54O12H6",
+      "num_atomos": 72,
+      "tipo_estructura": "Grafeno reducido (flake)",
+      "area_nm2": 3.2,
+      "grupos_funcionales": ["OH", "COOH", "Epoxy"]
+    },
+    "resultados": {
+      "energia_total_ry": -486.234,
+      "band_gap_ev": 0.15,
+      "tipo_conductor": "Semi-metal",
+      "densidad_defectos_porcentaje": 8.5
+    },
+    "propiedades_electronicas": {
+      "conductividad_s_m": 4.5e5,
+      "movilidad_cm2_vs": 2500,
+      "concentracion_portadores_cm2": 1.2e13
+    },
+    "energia_formacion": {
+      "defecto_vacancia_ev": 7.2,
+      "grupo_epoxy_ev": 2.8,
+      "grupo_hidroxilo_ev": 3.1
+    },
+    "tiempo_computacional_h": 36.8,
+    "archivo_output": "rGO_flake_scf.out"
+  },
+  {
+    "id_nanomaterial": 5,
+    "fecha_simulacion": {"$date": "2023-02-22T11:30:00.000Z"},
+    "tipo_calculo": "Propiedades Plasmónicas",
+    "software": "FDTD Solutions",
+    "metodo": "Finite-Difference Time-Domain",
+    "funcional": "N/A",
+    "base": "N/A",
+    "sistema": {
+      "formula": "Ag",
+      "geometria": "Esfera",
+      "diametro_nm": 25,
+      "medio_dielectrico": "Agua (n=1.33)"
+    },
+    "resultados": {
+      "longitud_onda_lspr_nm": 410,
+      "ancho_pico_nm": 52,
+      "factor_calidad": 7.9,
+      "seccion_eficaz_extincion_nm2": 1850
+    },
+    "propiedades_opticas": {
+      "absorcion_nm2": 1250,
+      "dispersion_nm2": 600,
+      "mejora_campo_cercano": 85,
+      "factor_mejora_sers": 1.2e7
+    },
+    "dependencia_tamano": {
+      "shift_rojo_por_nm": 1.8,
+      "sensibilidad_indice_refractivo_nm_riu": 180
+    },
+    "tiempo_computacional_h": 12.5,
+    "archivo_output": "AgNP_25nm_FDTD.fsp"
+  },
+  {
+    "id_nanomaterial": 6,
+    "fecha_simulacion": {"$date": "2023-03-10T13:00:00.000Z"},
+    "tipo_calculo": "Superficie y Fotocatálisis",
+    "software": "VASP",
+    "metodo": "DFT",
+    "funcional": "HSE06",
+    "base": "PAW",
+    "sistema": {
+      "formula": "Zn48O48",
+      "superficie_expuesta": "(101)",
+      "area_superficie_nm2": 4.5,
+      "vacancias_oxigeno": 2
+    },
+    "resultados": {
+      "energia_total_ev": -384.562,
+      "band_gap_directo_ev": 3.24,
+      "band_gap_indirecto_ev": 3.18,
+      "energia_formacion_vacancia_ev": 2.85
+    },
+    "propiedades_fotocataliticas": {
+      "potencial_reduccion_h_h2_v": -0.45,
+      "potencial_oxidacion_o2_h2o_v": 2.79,
+      "energia_excitacion_minima_ev": 3.24,
+      "absorcion_visible_porcentaje": 8
+    },
+    "sitios_activos": {
+      "vacancias_oxigeno": 2,
+      "atomos_zn_superficie": 24,
+      "energia_adsorcion_h2o_kj_mol": -65
+    },
+    "tiempo_computacional_h": 96.2,
+    "archivo_output": "ZnO_101_HSE06.xml"
+  },
+  {
+    "id_nanomaterial": 7,
+    "fecha_simulacion": {"$date": "2023-07-15T10:00:00.000Z"},
+    "tipo_calculo": "Aleación Bimetálica",
+    "software": "Gaussian 16",
+    "metodo": "DFT",
+    "funcional": "M06-L",
+    "base": "LANL2DZ (Au,Pd), 6-31G(d) (resto)",
+    "sistema": {
+      "formula": "Au19Pd19",
+      "num_atomos": 38,
+      "ratio_au_pd": "1:1",
+      "tipo_estructura": "Core-shell / Aleado"
+    },
+    "resultados": {
+      "energia_total_hartree": -6842.358,
+      "energia_enlace_au_pd_kj_mol": 245,
+      "energia_segregacion_kj_mol": 12.5,
+      "configuracion_estable": "Aleado"
+    },
+    "propiedades_cataliticas": {
+      "energia_adsorcion_co_kj_mol": -125,
+      "energia_adsorcion_o2_kj_mol": -95,
+      "barrera_activacion_co_oxidacion_kj_mol": 68,
+      "temperatura_onset_c": 85
+    },
+    "sitios_cataliticos": {
+      "sitios_au": 8,
+      "sitios_pd": 9,
+      "sitios_interfaciales_au_pd": 12,
+      "actividad_relativa_pd_puro": 2.3
+    },
+    "tiempo_computacional_h": 120.5,
+    "archivo_output": "AuPd_alloy_M06L.log"
+  },
+  {
+    "id_nanomaterial": 8,
+    "fecha_simulacion": {"$date": "2023-03-24T14:30:00.000Z"},
+    "tipo_calculo": "Propiedades Magnéticas",
+    "software": "VASP",
+    "metodo": "DFT+U",
+    "funcional": "PBE",
+    "base": "PAW",
+    "sistema": {
+      "formula": "Fe24O32",
+      "estructura": "Espinela inversa",
+      "sitios_tetraedricos": 8,
+      "sitios_octaedricos": 16
+    },
+    "resultados": {
+      "energia_total_ev": -512.845,
+      "momento_magnetico_total_bohr": 96.0,
+      "momento_por_fe_bohr": 4.0,
+      "tipo_magnetismo": "Ferrimagnético"
+    },
+    "propiedades_magneticas": {
+      "magnetizacion_saturacion_emu_g": 92.5,
+      "temperatura_curie_k": 858,
+      "anisotropia_magnetica_kj_m3": 13.5,
+      "coercitividad_calculada_oe": 100
+    },
+    "acoplamiento_superexchange": {
+      "j_fe_tet_fe_oct_k": -25.8,
+      "j_fe_oct_fe_oct_k": 18.2,
+      "configuracion_spins": "↑↓↑↓"
+    },
+    "tiempo_computacional_h": 85.3,
+    "archivo_output": "Fe3O4_magnetic_DFTU.xml"
+  },
+  {
+    "id_nanomaterial": 11,
+    "fecha_simulacion": {"$date": "2023-04-30T09:30:00.000Z"},
+    "tipo_calculo": "Catálisis Heterogénea",
+    "software": "Gaussian 16",
+    "metodo": "DFT",
+    "funcional": "PBE0",
+    "base": "def2-TZVP",
+    "sistema": {
+      "formula": "Pd13",
+      "geometria": "Icosaedro truncado",
+      "sitios_superficie": 12,
+      "coordinacion_promedio": 7.8
+    },
+    "resultados": {
+      "energia_total_hartree": -5243.762,
+      "energia_homo_ev": -4.85,
+      "energia_lumo_ev": -2.92,
+      "gap_homo_lumo_ev": 1.93
+    },
+    "reaccion_hidrogenacion": {
+      "sustrato": "Etileno",
+      "producto": "Etano",
+      "energia_adsorcion_c2h4_kj_mol": -88,
+      "energia_adsorcion_h2_kj_mol": -42,
+      "barrera_activacion_kj_mol": 52,
+      "energia_reaccion_kj_mol": -137
+    },
+    "mecanismo_reaccion": {
+      "paso_1": "Adsorción C2H4",
+      "paso_2": "Disociación H2",
+      "paso_3": "Hidrogenación (2 pasos)",
+      "paso_4": "Desorción C2H6",
+      "paso_limitante": "Primera hidrogenación"
+    },
+    "tiempo_computacional_h": 156.8,
+    "archivo_output": "Pd13_hydrogenation_PBE0.log"
+  },
+  {
+    "id_nanomaterial": 16,
+    "fecha_simulacion": {"$date": "2023-06-10T11:00:00.000Z"},
+    "tipo_calculo": "Electrocatálisis ORR",
+    "software": "VASP",
+    "metodo": "DFT",
+    "funcional": "RPBE",
+    "base": "PAW",
+    "sistema": {
+      "formula": "Pt38",
+      "superficie_dominante": "(111)",
+      "sitios_activos": 12,
+      "recubrimiento_oh": 0.25
+    },
+    "resultados": {
+      "energia_total_ev": -498.325,
+      "funcion_trabajo_ev": 5.65,
+      "densidad_carga_superficie_e_nm2": 0.08
+    },
+    "reduccion_oxigeno": {
+      "energia_adsorcion_o2_ev": -0.45,
+      "energia_adsorcion_oh_ev": -0.85,
+      "energia_adsorcion_h2o_ev": -0.32,
+      "sobrepotencial_v": 0.42,
+      "via_reaccion": "Asociativa (4e-)"
+    },
+    "diagrama_energetico": {
+      "o2_ads": 0.0,
+      "ooh_ads": 0.78,
+      "o_ads": 1.52,
+      "oh_ads": 2.38,
+      "h2o_des": 4.92
+    },
+    "actividad_teorica": {
+      "corriente_intercambio_a_cm2": 1.2e-3,
+      "pendiente_tafel_mv_dec": 60,
+      "factor_mejora_vs_pt_bulk": 3.5
+    },
+    "tiempo_computacional_h": 180.5,
+    "archivo_output": "Pt38_ORR_RPBE.xml"
+  },
+  {
+    "id_nanomaterial": 3,
+    "fecha_simulacion": {"$date": "2023-02-12T15:00:00.000Z"},
+    "tipo_calculo": "Transporte Electrónico",
+    "software": "ATK",
+    "metodo": "DFT + NEGF",
+    "funcional": "PBE",
+    "base": "DZP",
+    "sistema": {
+      "tipo": "Dispositivo 2-terminales",
+      "electrodo_izq": "Grafeno",
+      "canal": "rGO con defectos",
+      "electrodo_der": "Grafeno",
+      "longitud_canal_nm": 10
+    },
+    "resultados": {
+      "conductancia_g0": 2.85,
+      "resistencia_kohm": 4.55,
+      "transmision_fermi": 0.88,
+      "gap_transporte_ev": 0.18
+    },
+    "curva_iv": {
+      "corriente_1v_ua": 220,
+      "no_linealidad": "Baja",
+      "simetria": "Simétrica",
+      "on_off_ratio": 1.5
+    },
+    "estados_transmision": {
+      "canal_sigma": 0.45,
+      "canal_pi": 0.43,
+      "efecto_defectos": "Reducción 35%"
+    },
+    "tiempo_computacional_h": 48.2,
+    "archivo_output": "rGO_transport_ATK.nc"
+  },
+  {
+    "id_nanomaterial": 10,
+    "fecha_simulacion": {"$date": "2023-05-13T10:30:00.000Z"},
+    "tipo_calculo": "Fotocatálisis Agua",
+    "software": "VASP",
+    "metodo": "DFT",
+    "funcional": "HSE06",
+    "base": "PAW",
+    "sistema": {
+      "formula": "Ti48O96",
+      "morfologia": "Nanotubo",
+      "diametro_nm": 8,
+      "espesor_pared_nm": 2.5,
+      "superficie_interna": "(101)",
+      "superficie_externa": "(001)"
+    },
+    "resultados": {
+      "energia_total_ev": -768.234,
+      "band_gap_ev": 3.05,
+      "potencial_cbm_vs_nhe_v": -0.52,
+      "potencial_vbm_vs_nhe_v": 2.53
+    },
+    "splitting_agua": {
+      "overpotencial_her_v": 0.12,
+      "overpotencial_oer_v": 0.48,
+      "eficiencia_solar_teorica_porcentaje": 8.5,
+      "produccion_h2_teorica_ml_h_cm2": 12.5
+    },
+    "sitios_activos": {
+      "ti_superficie_externa": 24,
+      "ti_superficie_interna": 20,
+      "vacancias_oxigeno": 4,
+      "energia_adsorcion_h_ev": -0.28
+    },
+    "absorcion_luz": {
+      "threshold_nm": 407,
+      "region_activa": "UV-A",
+      "coeficiente_absorcion_cm": 1.5e5
+    },
+    "tiempo_computacional_h": 142.8,
+    "archivo_output": "TiO2_NT_photocatalysis_HSE.xml"
+  },
+  {
+    "id_nanomaterial": 12,
+    "fecha_simulacion": {"$date": "2023-09-11T13:45:00.000Z"},
+    "tipo_calculo": "Heteroestructura",
+    "software": "Quantum ESPRESSO",
+    "metodo": "DFT",
+    "funcional": "PBE",
+    "base": "Plane Wave",
+    "sistema": {
+      "componente_1": "ZnO",
+      "componente_2": "Ag",
+      "tipo_interfaz": "Ag(111)/ZnO(101)",
+      "area_interfaz_nm2": 3.8,
+      "espesor_ag_nm": 1.5,
+      "espesor_zno_nm": 3.5
+    },
+    "resultados": {
+      "energia_total_ry": -645.892,
+      "energia_adhesion_j_m2": 1.85,
+      "work_function_zno_ev": 4.25,
+      "work_function_ag_ev": 4.52,
+      "band_bending_ev": 0.35
+    },
+    "transferencia_carga": {
+      "direccion": "Ag → ZnO",
+      "carga_transferida_e": 0.15,
+      "region_deplexion_nm": 2.8,
+      "campo_electrico_v_nm": 0.125
+    },
+    "propiedades_fotocataliticas": {
+      "separacion_portadores": "Mejorada",
+      "tiempo_vida_excitones_ps": 850,
+      "eficiencia_mejora_vs_zno_puro": 3.2,
+      "actividad_visible": "Extendida a 450 nm"
+    },
+    "sitios_interfaciales": {
+      "ag_sobre_zn": 8,
+      "ag_sobre_o": 6,
+      "distancia_ag_zno_angstrom": 2.45,
+      "energia_enlace_ag_o_kj_mol": 185
+    },
+    "tiempo_computacional_h": 98.5,
+    "archivo_output": "AgZnO_hetero_QE.out"
+  },
+  {
+    "id_nanomaterial": 1,
+    "fecha_simulacion": {"$date": "2023-01-17T16:00:00.000Z"},
+    "tipo_calculo": "Biosensado SERS",
+    "software": "COMSOL + DFT",
+    "metodo": "Electromagnético + DFT",
+    "funcional": "B3LYP",
+    "base": "6-31G(d)",
+    "sistema": {
+      "geometria": "Dímero Au-Au",
+      "diametro_np_nm": 15,
+      "gap_nm": 2,
+      "molecula_prueba": "Rodamina 6G"
+    },
+    "resultados": {
+      "factor_mejora_calculado": 1.5e7,
+      "mejora_campo_electrico": 850,
+      "longitud_onda_optima_nm": 633,
+      "volumen_hot_spot_nm3": 8
+    },
+    "propiedades_opticas": {
+      "seccion_eficaz_sers_cm2": 1.2e-15,
+      "factor_calidad": 45,
+      "ancho_resonancia_nm": 28,
+      "sensibilidad_molec": "Nivel femtomolar"
+    },
+    "modos_vibraciones_mejorados": [
+      {"frecuencia_cm": 612, "mejora": 1.8e7, "modo": "C-C stretch"},
+      {"frecuencia_cm": 1363, "mejora": 1.2e7, "modo": "Aromatic C-C"},
+      {"frecuencia_cm": 1651, "mejora": 8.5e6, "modo": "C=C stretch"}
+    ],
+    "aplicacion_biosensado": {
+      "biomarcador_objetivo": "Proteína",
+      "limite_deteccion_teorico_m": 1e-15,
+      "selectividad": "Alta",
+      "tiempo_deteccion_s": 30
+    },
+    "tiempo_computacional_h": 36.5,
+    "archivo_output": "Au_dimer_SERS_COMSOL.mph"
+  },
+  {
+    "id_nanomaterial": 4,
+    "fecha_simulacion": {"$date": "2023-12-02T10:00:00.000Z"},
+    "tipo_calculo": "Quantum Dots Óptica",
+    "software": "ORCA",
+    "metodo": "TD-DFT",
+    "funcional": "CAM-B3LYP",
+    "base": "def2-SVP",
+    "sistema": {
+      "formula": "Cd33Se33",
+      "diametro_nm": 5.2,
+      "ligandos_superficie": "TOPO",
+      "num_ligandos": 18
+    },
+    "resultados": {
+      "energia_total_hartree": -8652.458,
+      "primer_excitacion_ev": 2.38,
+      "longitud_onda_emision_nm": 521,
+      "fuerza_oscilador": 0.92
+    },
+    "propiedades_opticas": {
+      "absorcion_pico_nm": 500,
+      "stokes_shift_nm": 21,
+      "rendimiento_cuantico_calculado": 0.78,
+      "tiempo_vida_fluorescencia_ns": 25
+    },
+    "transiciones_electronicas": [
+      {"excitacion_ev": 2.38, "lambda_nm": 521, "tipo": "HOMO→LUMO", "caracter": "Excitónico"},
+      {"excitacion_ev": 2.68, "lambda_nm": 463, "tipo": "HOMO-1→LUMO", "caracter": "Excitónico"},
+      {"excitacion_ev": 3.12, "lambda_nm": 397, "tipo": "HOMO→LUMO+1", "caracter": "Banda"}
+    ],
+    "efecto_confinamiento": {
+      "radio_bohr_nm": 5.8,
+      "energia_confinamiento_ev": 0.45,
+      "factor_mejora_absorcion": 12.5
+    },
+    "tiempo_computacional_h": 68.3,
+    "archivo_output": "CdSe_QD_TDDFT.out"
+  },
+  {
+    "id_nanomaterial": 13,
+    "fecha_simulacion": {"$date": "2023-06-07T14:00:00.000Z"},
+    "tipo_calculo": "Dopaje Nitrógeno",
+    "software": "VASP",
+    "metodo": "DFT",
+    "funcional": "PBE",
+    "base": "PAW",
+    "sistema": {
+      "formula": "C50N4",
+      "tipo_dopaje": "Grafítico",
+      "concentracion_n_at_porcentaje": 7.4,
+      "configuracion": "4 átomos N sustit."
+    },
+    "resultados": {
+      "energia_total_ev": -423.658,
+      "energia_formacion_n_ev": 2.45,
+      "band_gap_ev": 0.0,
+      "tipo_dopaje": "n-type"
+    },
+    "propiedades_electronicas": {
+      "nivel_fermi_shift_ev": 0.28,
+      "concentracion_portadores_cm2": 5.2e13,
+      "movilidad_cm2_vs": 1800,
+      "conductividad_s_m": 1.5e5
+    },
+    "aplicacion_baterias": {
+      "capacidad_especifica_teorica_mah_g": 1116,
+      "potencial_insercion_li_v": 0.25,
+      "barrera_difusion_li_ev": 0.42,
+      "ciclos_estabilidad": 5000
+    },
+    "sitios_activos_n": {
+      "energia_adsorcion_li_n_ev": -1.85,
+      "distancia_li_n_angstrom": 2.05,
+      "carga_transferida_e": 0.72
+    },
+    "tiempo_computacional_h": 54.7,
+    "archivo_output": "N_graphene_batt_PBE.xml"
+  },
+  {
+    "id_nanomaterial": 14,
+    "fecha_simulacion": {"$date": "2023-09-15T11:30:00.000Z"},
+    "tipo_calculo": "Fotocatálisis Cu2O",
+    "software": "VASP",
+    "metodo": "DFT",
+    "funcional": "HSE06",
+    "base": "PAW",
+    "sistema": {
+      "formula": "Cu32O16",
+      "superficie": "(111)",
+      "terminacion": "Cu-rich",
+      "reconstruccion": "1x1"
+    },
+    "resultados": {
+      "energia_total_ev": -256.842,
+      "band_gap_directo_ev": 2.17,
+      "potencial_cbm_v": -0.72,
+      "potencial_vbm_v": 1.45
+    },
+    "propiedades_fotocataliticas": {
+      "absorcion_visible_inicio_nm": 572,
+      "eficiencia_solar_teorica_porcentaje": 18.5,
+      "estabilidad_fotoelectroquimica": "Moderada",
+      "fotocorrosion_riesgo": "Alto"
+    },
+    "reduccion_co2": {
+      "producto_principal": "CO",
+      "energia_adsorcion_co2_ev": -0.65,
+      "barrera_activacion_ev": 0.88,
+      "selectividad_co_porcentaje": 75
+    },
+    "tiempo_computacional_h": 78.9,
+    "archivo_output": "Cu2O_111_photocatal_HSE.xml"
+  },
+  {
+    "id_nanomaterial": 15,
+    "fecha_simulacion": {"$date": "2023-11-24T09:00:00.000Z"},
+    "tipo_calculo": "Quantum Dots InP",
+    "software": "ORCA",
+    "metodo": "TD-DFT",
+    "funcional": "PBE0",
+    "base": "def2-TZVP",
+    "sistema": {
+      "formula": "In13P13",
+      "diametro_nm": 4.8,
+      "ligandos": "Oleato + Oleamina",
+      "num_ligandos": 16
+    },
+    "resultados": {
+      "energia_total_hartree": -4852.365,
+      "primer_excitacion_ev": 2.58,
+      "longitud_onda_emision_nm": 480,
+      "fuerza_oscilador": 0.85
+    },
+    "propiedades_opticas": {
+      "absorcion_onset_nm": 465,
+      "emision_pico_nm": 480,
+      "fwhm_emision_nm": 35,
+      "rendimiento_cuantico": 0.72,
+      "tiempo_vida_ns": 42
+    },
+    "ventajas_cd_free": {
+      "toxicidad": "Baja",
+      "estabilidad_termica_c": 200,
+      "fotoestabilidad": "Excelente",
+      "aplicacion_displays": "Viable"
+    },
+    "tiempo_computacional_h": 82.4,
+    "archivo_output": "InP_QD_TDDFT_PBE0.out"
+  },
+  {
+    "id_nanomaterial": 17,
+    "fecha_simulacion": {"$date": "2023-08-20T15:30:00.000Z"},
+    "tipo_calculo": "Nanocompuesto CNT-Grafeno",
+    "software": "LAMMPS",
+    "metodo": "Molecular Dynamics",
+    "funcional": "N/A",
+    "base": "AIREBO potential",
+    "sistema": {
+      "cnt": "CNT (10,10)",
+      "grafeno_laminas": 3,
+      "area_total_nm2": 100,
+      "temperatura_k": 300,
+      "tiempo_simulacion_ns": 10
+    },
+    "resultados": {
+      "energia_total_ev": -2845.632,
+      "energia_interfaz_cnt_grafeno_mj_m2": 125,
+      "distancia_interlam_grafeno_nm": 0.342,
+      "distancia_cnt_grafeno_nm": 0.345
+    },
+    "propiedades_mecanicas": {
+      "modulo_young_gpa": 850,
+      "modulo_corte_gpa": 320,
+      "resistencia_traccion_gpa": 52,
+      "tenacidad_fractura_mpa_m05": 4.8
+    },
+    "propiedades_termicas": {
+      "conductividad_termica_w_mk": 3500,
+      "capacidad_calorifica_j_kg_k": 710,
+      "coeficiente_expansion_k": 1.2e-6
+    },
+    "propiedades_electricas": {
+      "conductividad_electrica_s_m": 2.5e6,
+      "percolacion_threshold": 0.05,
+      "mejora_vs_grafeno": 5.5
+    },
+    "tiempo_computacional_h": 156.0,
+    "archivo_output": "CNT_graphene_MD_10ns.dump"
+  },
+  {
+    "id_nanomaterial": 18,
+    "fecha_simulacion": {"$date": "2023-04-01T10:45:00.000Z"},
+    "tipo_calculo": "Nanozyme Antioxidante",
+    "software": "Gaussian 16",
+    "metodo": "DFT",
+    "funcional": "M06",
+    "base": "6-311G(d,p)",
+    "sistema": {
+      "formula": "Ce13O26",
+      "vacancias_oxigeno": 2,
+      "sitios_ce3": 4,
+      "sitios_ce4": 9
+    },
+    "resultados": {
+      "energia_total_hartree": -3254.896,
+      "energia_formacion_vacancia_ev": 2.15,
+      "ratio_ce3_ce4": 0.44,
+      "potencial_reduccion_v": 1.52
+    },
+    "actividad_catalitica": {
+      "tipo_actividad": "SOD-mimética",
+      "sustrato": "Superóxido (O2•−)",
+      "producto": "H2O2 + O2",
+      "km_aparente_mm": 0.085,
+      "vmax_umol_min_mg": 125,
+      "kcat_s": 2.8e4
+    },
+    "mecanismo_reaccion": {
+      "paso_1": "Ce4+ + O2•− → Ce3+ + O2",
+      "paso_2": "Ce3+ + O2•− + 2H+ → Ce4+ + H2O2",
+      "ciclo": "Redox Ce3+/Ce4+",
+      "regeneracion": "Espontánea"
+    },
+    "citotoxicidad": {
+      "ic50_ug_ml": ">500",
+      "biocompatibilidad": "Excelente",
+      "clearance_renal": "Posible (<5nm)"
+    },
+    "tiempo_computacional_h": 94.2,
+    "archivo_output": "CeO2_nanozyme_M06.log"
+  },
+  {
+    "id_nanomaterial": 19,
+    "fecha_simulacion": {"$date": "2023-12-10T13:00:00.000Z"},
+    "tipo_calculo": "Nanotubos BN",
+    "software": "VASP",
+    "metodo": "DFT",
+    "funcional": "optB88-vdW",
+    "base": "PAW",
+    "sistema": {
+      "formula": "B60N60",
+      "tipo": "BNNT (10,10)",
+      "diametro_nm": 1.36,
+      "longitud_nm": 2.5
+    },
+    "resultados": {
+      "energia_total_ev": -1458.523,
+      "band_gap_directo_ev": 5.48,
+      "tipo_semiconductor": "Aislante de banda ancha",
+      "energia_enlace_bn_kj_mol": 385
+    },
+    "propiedades_termicas": {
+      "conductividad_termica_w_mk": 300,
+      "estabilidad_termica_k": 1100,
+      "oxidacion_inicio_k": 973,
+      "coeficiente_expansion_k": -1.5e-6
+    },
+    "propiedades_mecanicas": {
+      "modulo_young_gpa": 865,
+      "resistencia_traccion_gpa": 55,
+      "rigidez_flexion_n_m2": 4.5e-26
+    },
+    "propiedades_dielectricas": {
+      "constante_dielectrica": 2.8,
+      "resistividad_ohm_m": 1e14,
+      "breakdown_voltage_v_nm": 12
+    },
+    "aplicaciones": {
+      "aislamiento_termico": "Excelente",
+      "blindaje_neutrones": "Efectivo",
+      "composite_ceramico": "Viable",
+      "nanoelectronica": "Sustrato ideal"
+    },
+    "tiempo_computacional_h": 108.5,
+    "archivo_output": "BNNT_thermal_vdW.xml"
+  },
+  {
+    "id_nanomaterial": 20,
+    "fecha_simulacion": {"$date": "2023-05-19T11:15:00.000Z"},
+    "tipo_calculo": "Biosensado Plasmónico",
+    "software": "COMSOL Multiphysics",
+    "metodo": "FEM Electromagnético",
+    "funcional": "N/A",
+    "base": "N/A",
+    "sistema": {
+      "geometria": "Estructura Au-Ag core-shell",
+      "core_au_nm": 15,
+      "shell_ag_nm": 5,
+      "diametro_total_nm": 25,
+      "medio": "Agua (n=1.33)"
+    },
+    "resultados": {
+      "lspr_pico_nm": 445,
+      "ancho_banda_nm": 62,
+      "factor_calidad": 7.2,
+      "seccion_eficaz_extincion_nm2": 2250
+    },
+    "sensibilidad_biosensado": {
+      "shift_por_riu_nm": 285,
+      "fom_figure_of_merit": 4.6,
+      "limite_deteccion_riu": 1e-6,
+      "rango_dinamico_riu": [1.33, 1.45]
+    },
+    "aplicacion_biomoleculas": {
+      "proteina_modelo": "BSA",
+      "capa_bioreconocimiento_nm": 3,
+      "shift_detectable_nm": 12,
+      "concentracion_minima_ng_ml": 0.5
+    },
+    "mejora_campo_cercano": {
+      "factor_mejora_core_shell": 125,
+      "factor_mejora_au_puro": 85,
+      "ventaja_core_shell": 1.47,
+      "volumen_hot_spot_nm3": 15
+    },
+    "tiempo_computacional_h": 24.8,
+    "archivo_output": "AuAg_coreshell_biosensor.mph"
+  }
+]
