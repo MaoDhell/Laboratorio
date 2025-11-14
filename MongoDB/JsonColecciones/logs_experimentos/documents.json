@@ -1,0 +1,238 @@
+[
+  {
+    "id_orden": 1,
+    "timestamp": {"$date": "2023-01-10T08:00:00.000Z"},
+    "evento": "INICIO_SINTESIS",
+    "nivel": "INFO",
+    "operador": "Carlos Martínez",
+    "descripcion": "Iniciando síntesis hidrotermal de AuNPs",
+    "parametros_sistema": {
+      "temperatura_laboratorio_c": 22.5,
+      "humedad_relativa_porcentaje": 45,
+      "presion_atmosferica_mbar": 1013
+    },
+    "reactivos_preparados": [
+      {"nombre": "AuCl3", "cantidad": "2.5g", "lote": "AU2023-001"},
+      {"nombre": "NaBH4", "cantidad": "1.2g", "lote": "NABH2023-033"}
+    ]
+  },
+  {
+    "id_orden": 1,
+    "timestamp": {"$date": "2023-01-10T08:15:00.000Z"},
+    "evento": "CARGA_REACTOR",
+    "nivel": "INFO",
+    "operador": "Carlos Martínez",
+    "descripcion": "Carga de reactivos completada en reactor hidrotermal",
+    "volumen_total_ml": 150,
+    "llenado_porcentaje": 75
+  },
+  {
+    "id_orden": 1,
+    "timestamp": {"$date": "2023-01-10T09:30:00.000Z"},
+    "evento": "TEMPERATURA_OBJETIVO",
+    "nivel": "INFO",
+    "operador": "Sistema Automatico",
+    "descripcion": "Temperatura objetivo alcanzada",
+    "temperatura_actual_c": 180.5,
+    "temperatura_objetivo_c": 180.0,
+    "tiempo_rampa_min": 45
+  },
+  {
+    "id_orden": 1,
+    "timestamp": {"$date": "2023-01-10T12:45:00.000Z"},
+    "evento": "ALARMA_PRESION",
+    "nivel": "WARNING",
+    "operador": "Sistema Automatico",
+    "descripcion": "Presión ligeramente por encima del objetivo",
+    "presion_actual_atm": 10.8,
+    "presion_objetivo_atm": 10.5,
+    "accion_tomada": "Ajuste automático de válvula"
+  },
+  {
+    "id_orden": 1,
+    "timestamp": {"$date": "2023-01-10T16:30:00.000Z"},
+    "evento": "FIN_SINTESIS",
+    "nivel": "INFO",
+    "operador": "Carlos Martínez",
+    "descripcion": "Síntesis completada exitosamente",
+    "duracion_total_min": 240,
+    "color_solucion_final": "Rojo vino característico",
+    "observaciones": "Síntesis exitosa, color indica formación de AuNPs"
+  },
+  {
+    "id_orden": 2,
+    "timestamp": {"$date": "2023-01-20T09:00:00.000Z"},
+    "evento": "INICIO_SINTESIS",
+    "nivel": "INFO",
+    "operador": "Ricardo Mendoza",
+    "descripcion": "Iniciando CVD para síntesis de CNTs",
+    "equipo_preparacion": {
+      "limpieza_camara": "Completada",
+      "presion_base_mbar": 1e-6,
+      "flujo_argon_sccm": 100
+    }
+  },
+  {
+    "id_orden": 2,
+    "timestamp": {"$date": "2023-01-20T10:15:00.000Z"},
+    "evento": "TEMPERATURA_CRITICA",
+    "nivel": "WARNING",
+    "operador": "Sistema Automatico",
+    "descripcion": "Temperatura excedió límite superior brevemente",
+    "temperatura_max_c": 852.3,
+    "limite_superior_c": 850.0,
+    "duracion_exceso_s": 45,
+    "accion_tomada": "Reducción de potencia de calentador"
+  },
+  {
+    "id_orden": 3,
+    "timestamp": {"$date": "2023-02-05T08:30:00.000Z"},
+    "evento": "ADICION_REDUCTOR",
+    "nivel": "INFO",
+    "operador": "María López",
+    "descripcion": "Adición gota a gota de agente reductor",
+    "velocidad_adicion_ml_min": 2.5,
+    "volumen_total_ml": 50,
+    "tiempo_estimado_min": 20,
+    "observaciones": "Cambio gradual de color observado"
+  },
+  {
+    "id_orden": 3,
+    "timestamp": {"$date": "2023-02-05T10:45:00.000Z"},
+    "evento": "CAMBIO_COLOR",
+    "nivel": "INFO",
+    "operador": "María López",
+    "descripcion": "Cambio de color de marrón a negro indicando reducción completa",
+    "color_inicial": "Marrón",
+    "color_final": "Negro",
+    "interpretacion": "Formación de grafeno reducido exitosa"
+  },
+  {
+    "id_orden": 4,
+    "timestamp": {"$date": "2023-02-18T10:00:00.000Z"},
+    "evento": "AJUSTE_PH",
+    "nivel": "INFO",
+    "operador": "Diana Torres",
+    "descripcion": "Ajuste de pH de solución precursora",
+    "ph_inicial": 10.2,
+    "ph_objetivo": 11.5,
+    "ph_final": 11.48,
+    "reactivo_usado": "NaOH 0.1M",
+    "volumen_agregado_ml": 2.5
+  },
+  {
+    "id_orden": 5,
+    "timestamp": {"$date": "2023-03-05T09:30:00.000Z"},
+    "evento": "CALCINACION_INICIO",
+    "nivel": "INFO",
+    "operador": "Andrés Morales",
+    "descripcion": "Inicio de proceso de calcinación de precursor ZnO",
+    "masa_inicial_g": 25.5,
+    "rampa_calentamiento": "5°C/min",
+    "temperatura_objetivo_c": 450
+  },
+  {
+    "id_orden": 6,
+    "timestamp": {"$date": "2023-03-20T11:30:00.000Z"},
+    "evento": "CONTROL_PH_CRITICO",
+    "nivel": "WARNING",
+    "operador": "Ana Rodríguez",
+    "descripcion": "pH fuera de rango óptimo detectado",
+    "ph_actual": 6.85,
+    "ph_objetivo": 7.0,
+    "rango_tolerancia": "±0.2",
+    "accion_tomada": "Ajuste manual inmediato"
+  },
+  {
+    "id_orden": 7,
+    "timestamp": {"$date": "2023-04-10T10:30:00.000Z"},
+    "evento": "FORMACION_PRECIPITADO",
+    "nivel": "INFO",
+    "operador": "Ricardo Mendoza",
+    "descripcion": "Formación de precipitado rojo característico observada",
+    "tiempo_aparicion_min": 45,
+    "densidad_precipitado": "Alta",
+    "interpretacion": "Nucleación de AuNPs completada"
+  },
+  {
+    "id_orden": 8,
+    "timestamp": {"$date": "2023-04-25T12:15:00.000Z"},
+    "evento": "ERROR_SENSOR",
+    "nivel": "ERROR",
+    "operador": "Sistema Automatico",
+    "descripcion": "Sensor de temperatura secundario fuera de línea",
+    "sensor_afectado": "TC-02",
+    "sensor_respaldo": "TC-01 operativo",
+    "accion_tomada": "Continuar con sensor primario, programar mantenimiento"
+  },
+  {
+    "id_orden": 9,
+    "timestamp": {"$date": "2023-05-08T11:00:00.000Z"},
+    "evento": "ANODIZACION_ESTABLE",
+    "nivel": "INFO",
+    "operador": "María López",
+    "descripcion": "Corriente de anodización estabilizada",
+    "corriente_ma": 50.2,
+    "voltaje_v": 20.0,
+    "densidad_corriente_ma_cm2": 2.5,
+    "tiempo_transcurrido_min": 120
+  },
+  {
+    "id_orden": 10,
+    "timestamp": {"$date": "2023-05-22T10:30:00.000Z"},
+    "evento": "CAMBIO_ATMOSFERA",
+    "nivel": "INFO",
+    "operador": "Ricardo Mendoza",
+    "descripcion": "Purga de aire y establecimiento de atmósfera inerte",
+    "gas_usado": "Nitrógeno",
+    "ciclos_purga": 3,
+    "presion_final_mbar": 1020,
+    "flujo_mantenimiento_ml_min": 50
+  },
+  {
+    "id_orden": 11,
+    "timestamp": {"$date": "2023-06-05T10:45:00.000Z"},
+    "evento": "REACCION_EXOTERMICA",
+    "nivel": "WARNING",
+    "operador": "Andrés Morales",
+    "descripcion": "Incremento rápido de temperatura detectado",
+    "temperatura_inicial_c": 75.2,
+    "temperatura_max_c": 85.8,
+    "velocidad_incremento_c_min": 5.3,
+    "accion_tomada": "Baño de hielo aplicado para control"
+  },
+  {
+    "id_orden": 12,
+    "timestamp": {"$date": "2023-06-20T11:15:00.000Z"},
+    "evento": "SINTESIS_VERDE",
+    "nivel": "INFO",
+    "operador": "Diana Torres",
+    "descripcion": "Síntesis ecológica a temperatura ambiente completada",
+    "temperatura_promedio_c": 22.0,
+    "tiempo_reaccion_h": 2.5,
+    "solventes_toxicos_usados": "Ninguno",
+    "observaciones": "Método sustentable exitoso"
+  },
+  {
+    "id_orden": 13,
+    "timestamp": {"$date": "2023-07-10T11:00:00.000Z"},
+    "evento": "MEZCLA_BIMETALICA",
+    "nivel": "INFO",
+    "operador": "Carlos Martínez",
+    "descripcion": "Mezcla de precursores Au y Pd completada",
+    "ratio_molar": "1:1",
+    "homogeneidad": "Verificada por UV-Vis in-situ",
+    "color_solucion": "Amarillo-naranja"
+  },
+  {
+    "id_orden": 14,
+    "timestamp": {"$date": "2023-07-25T12:30:00.000Z"},
+    "evento": "OPTIMIZACION_PARAMETROS",
+    "nivel": "INFO",
+    "operador": "Ricardo Mendoza",
+    "descripcion": "Ajuste fino de parámetros CVD para diámetro uniforme",
+    "flujo_gas_optimizado_sccm": 125,
+    "temperatura_ajustada_c": 900,
+    "resultado": "Mejora en uniformidad observada"
+  }
+]

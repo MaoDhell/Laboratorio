@@ -1,0 +1,727 @@
+[
+  {
+    "id_orden": 1,
+    "id_nanomaterial": 1,
+    "fecha_captura": {"$date": "2023-01-13T11:30:00.000Z"},
+    "tipo_microscopia": "TEM",
+    "id_equipo": 2,
+    "operador": "Ana Rodríguez",
+    "parametros_adquisicion": {
+      "voltaje_kv": 200,
+      "magnificacion": 100000,
+      "modo": "Bright Field",
+      "tiempo_exposicion_s": 2.5,
+      "tamano_pixel_nm": 0.5
+    },
+    "analisis_morfologico": {
+      "forma_predominante": "Esférica",
+      "diametro_promedio_nm": 15.8,
+      "desviacion_estandar_nm": 2.3,
+      "distribucion": "Normal",
+      "recuento_particulas": 250
+    },
+    "mediciones_individuales": [
+      {"particula_id": 1, "diametro_nm": 14.2, "circularidad": 0.95},
+      {"particula_id": 2, "diametro_nm": 16.5, "circularidad": 0.93},
+      {"particula_id": 3, "diametro_nm": 15.1, "circularidad": 0.97},
+      {"particula_id": 4, "diametro_nm": 17.8, "circularidad": 0.89}
+    ],
+    "histograma_tamanios": {
+      "rango_10_15_nm": 45,
+      "rango_15_20_nm": 180,
+      "rango_20_25_nm": 25
+    },
+    "observaciones": "Nanopartículas de oro altamente monodispersas con morfología esférica uniforme",
+    "archivo_imagen": "TEM_ORD001_AuNPs_100kx.tif",
+    "resolucion_imagen": {"ancho_px": 2048, "alto_px": 2048},
+    "metadatos_difraccion": {
+      "patron_difraccion": "FCC",
+      "planos_cristalinos": ["(111)", "(200)", "(220)"],
+      "parametro_red_angstrom": 4.078
+    }
+  },
+  {
+    "id_orden": 2,
+    "id_nanomaterial": 2,
+    "fecha_captura": {"$date": "2023-01-23T15:00:00.000Z"},
+    "tipo_microscopia": "TEM-HR",
+    "id_equipo": 2,
+    "operador": "Ana Rodríguez",
+    "parametros_adquisicion": {
+      "voltaje_kv": 200,
+      "magnificacion": 500000,
+      "modo": "High Resolution",
+      "tiempo_exposicion_s": 3.0,
+      "tamano_pixel_nm": 0.1
+    },
+    "analisis_morfologico": {
+      "forma_predominante": "Tubular",
+      "diametro_externo_promedio_nm": 18.5,
+      "diametro_interno_promedio_nm": 6.2,
+      "numero_paredes": "Multi-pared (5-8)",
+      "longitud_promedio_um": 2.5
+    },
+    "mediciones_individuales": [
+      {"cnt_id": 1, "diametro_ext_nm": 17.8, "paredes": 6, "longitud_um": 2.8},
+      {"cnt_id": 2, "diametro_ext_nm": 19.2, "paredes": 7, "longitud_um": 2.3},
+      {"cnt_id": 3, "diametro_ext_nm": 18.1, "paredes": 6, "longitud_um": 2.6}
+    ],
+    "espaciamiento_interplanar": {
+      "d_002_nm": 0.34,
+      "calidad_grafitizacion": "Alta"
+    },
+    "observaciones": "CNTs multi-pared con estructura cristalina bien definida y baja densidad de defectos",
+    "archivo_imagen": "HRTEM_ORD002_CNTs_500kx.tif",
+    "resolucion_imagen": {"ancho_px": 4096, "alto_px": 4096},
+    "metadatos_difraccion": {
+      "patron_difraccion": "Hexagonal",
+      "distancia_interplanar_nm": 0.34
+    }
+  },
+  {
+    "id_orden": 3,
+    "id_nanomaterial": 3,
+    "fecha_captura": {"$date": "2023-02-08T10:00:00.000Z"},
+    "tipo_microscopia": "AFM",
+    "id_equipo": 9,
+    "operador": "Claudia Vargas",
+    "parametros_adquisicion": {
+      "modo": "Tapping",
+      "frecuencia_resonancia_khz": 300,
+      "area_escaneo_um2": 25,
+      "resolucion_px": 512,
+      "velocidad_escaneo_hz": 0.5
+    },
+    "analisis_morfologico": {
+      "tipo_estructura": "Láminas",
+      "espesor_promedio_nm": 1.2,
+      "numero_capas": "1-3",
+      "area_lamina_promedio_um2": 8.5,
+      "rugosidad_rms_nm": 0.8
+    },
+    "mediciones_individuales": [
+      {"lamina_id": 1, "espesor_nm": 0.9, "area_um2": 12.5, "capas": 1},
+      {"lamina_id": 2, "espesor_nm": 1.8, "area_um2": 6.8, "capas": 2},
+      {"lamina_id": 3, "espesor_nm": 1.1, "area_um2": 9.2, "capas": 1}
+    ],
+    "topografia": {
+      "altura_maxima_nm": 15.2,
+      "altura_minima_nm": 0.0,
+      "pliegues_detectados": 3
+    },
+    "observaciones": "Grafeno reducido con láminas de 1-2 capas predominantemente, superficie relativamente lisa",
+    "archivo_imagen": "AFM_ORD003_rGO_5x5um.spm",
+    "resolucion_imagen": {"ancho_px": 512, "alto_px": 512}
+  },
+  {
+    "id_orden": 4,
+    "id_nanomaterial": 5,
+    "fecha_captura": {"$date": "2023-02-21T11:45:00.000Z"},
+    "tipo_microscopia": "SEM",
+    "id_equipo": 14,
+    "operador": "Ana Rodríguez",
+    "parametros_adquisicion": {
+      "voltaje_kv": 15,
+      "magnificacion": 50000,
+      "detector": "SE2",
+      "distancia_trabajo_mm": 8.5,
+      "recubrimiento": "Au-Pd 5nm"
+    },
+    "analisis_morfologico": {
+      "forma_predominante": "Esférica",
+      "diametro_promedio_nm": 25.5,
+      "desviacion_estandar_nm": 3.8,
+      "grado_aglomeracion": "Bajo",
+      "distribucion_espacial": "Uniforme"
+    },
+    "mediciones_individuales": [
+      {"particula_id": 1, "diametro_nm": 22.3},
+      {"particula_id": 2, "diametro_nm": 27.8},
+      {"particula_id": 3, "diametro_nm": 24.1},
+      {"particula_id": 4, "diametro_nm": 26.9}
+    ],
+    "analisis_edx": {
+      "elementos_detectados": ["Ag", "O"],
+      "composicion_at_porcentaje": {
+        "Ag": 92.5,
+        "O": 7.5
+      },
+      "pureza": "Alta"
+    },
+    "observaciones": "AgNPs bien dispersas con morfología esférica uniforme, baja oxidación superficial",
+    "archivo_imagen": "SEM_ORD004_AgNPs_50kx.tif",
+    "resolucion_imagen": {"ancho_px": 1024, "alto_px": 768}
+  },
+  {
+    "id_orden": 5,
+    "id_nanomaterial": 6,
+    "fecha_captura": {"$date": "2023-03-08T14:20:00.000Z"},
+    "tipo_microscopia": "SEM",
+    "id_equipo": 14,
+    "operador": "Isabella Silva",
+    "parametros_adquisicion": {
+      "voltaje_kv": 10,
+      "magnificacion": 30000,
+      "detector": "InLens",
+      "distancia_trabajo_mm": 6.0,
+      "recubrimiento": "Carbono 10nm"
+    },
+    "analisis_morfologico": {
+      "forma_predominante": "Hexagonal",
+      "diametro_promedio_nm": 35.2,
+      "longitud_promedio_nm": 42.5,
+      "relacion_aspecto": 1.21,
+      "grado_aglomeracion": "Medio"
+    },
+    "mediciones_individuales": [
+      {"cristal_id": 1, "ancho_nm": 33.5, "largo_nm": 40.2},
+      {"cristal_id": 2, "ancho_nm": 36.8, "largo_nm": 44.1},
+      {"cristal_id": 3, "ancho_nm": 34.9, "largo_nm": 43.2}
+    ],
+    "analisis_edx": {
+      "elementos_detectados": ["Zn", "O"],
+      "composicion_at_porcentaje": {
+        "Zn": 50.2,
+        "O": 49.8
+      },
+      "estequiometria": "ZnO ideal"
+    },
+    "observaciones": "ZnO nanoestructurado con morfología hexagonal bien definida, estructura wurtzita",
+    "archivo_imagen": "SEM_ORD005_ZnO_30kx.tif",
+    "resolucion_imagen": {"ancho_px": 1280, "alto_px": 960}
+  },
+  {
+    "id_orden": 6,
+    "id_nanomaterial": 8,
+    "fecha_captura": {"$date": "2023-03-23T09:30:00.000Z"},
+    "tipo_microscopia": "TEM",
+    "id_equipo": 2,
+    "operador": "Ana Rodríguez",
+    "parametros_adquisicion": {
+      "voltaje_kv": 200,
+      "magnificacion": 80000,
+      "modo": "Bright Field",
+      "tiempo_exposicion_s": 2.0,
+      "tamano_pixel_nm": 0.8
+    },
+    "analisis_morfologico": {
+      "forma_predominante": "Cuasi-esférica",
+      "diametro_promedio_nm": 12.5,
+      "desviacion_estandar_nm": 1.8,
+      "distribucion": "Log-normal",
+      "recuento_particulas": 180
+    },
+    "mediciones_individuales": [
+      {"particula_id": 1, "diametro_nm": 11.2, "forma": "Esférica"},
+      {"particula_id": 2, "diametro_nm": 13.8, "forma": "Poliédrica"},
+      {"particula_id": 3, "diametro_nm": 12.1, "forma": "Esférica"}
+    ],
+    "propiedades_magneticas": {
+      "contraste_magnetico": "Observable",
+      "orientacion_campo": "Aleatoria"
+    },
+    "observaciones": "Fe3O4 nanopartículas magnéticas con tamaño uniforme ideal para imagen médica",
+    "archivo_imagen": "TEM_ORD006_Fe3O4_80kx.tif",
+    "resolucion_imagen": {"ancho_px": 2048, "alto_px": 2048},
+    "metadatos_difraccion": {
+      "patron_difraccion": "Espinela inversa",
+      "parametro_red_angstrom": 8.396
+    }
+  },
+  {
+    "id_orden": 7,
+    "id_nanomaterial": 1,
+    "fecha_captura": {"$date": "2023-04-13T10:15:00.000Z"},
+    "tipo_microscopia": "TEM",
+    "id_equipo": 2,
+    "operador": "Ana Rodríguez",
+    "parametros_adquisicion": {
+      "voltaje_kv": 200,
+      "magnificacion": 120000,
+      "modo": "Bright Field",
+      "tiempo_exposicion_s": 2.8,
+      "tamano_pixel_nm": 0.4
+    },
+    "analisis_morfologico": {
+      "forma_predominante": "Esférica",
+      "diametro_promedio_nm": 16.2,
+      "desviacion_estandar_nm": 2.1,
+      "distribucion": "Normal",
+      "recuento_particulas": 280
+    },
+    "mediciones_individuales": [
+      {"particula_id": 1, "diametro_nm": 15.5, "circularidad": 0.96},
+      {"particula_id": 2, "diametro_nm": 17.1, "circularidad": 0.94},
+      {"particula_id": 3, "diametro_nm": 16.8, "circularidad": 0.95}
+    ],
+    "recubrimiento_superficial": {
+      "tipo": "PEG",
+      "espesor_nm": 2.5,
+      "cobertura_porcentaje": 95
+    },
+    "observaciones": "AuNPs con recubrimiento PEG para aplicaciones biomédicas, excelente monodispersidad",
+    "archivo_imagen": "TEM_ORD007_AuNPs_PEG_120kx.tif",
+    "resolucion_imagen": {"ancho_px": 2048, "alto_px": 2048}
+  },
+  {
+    "id_orden": 8,
+    "id_nanomaterial": 11,
+    "fecha_captura": {"$date": "2023-04-28T11:00:00.000Z"},
+    "tipo_microscopia": "TEM-HR",
+    "id_equipo": 2,
+    "operador": "Isabella Silva",
+    "parametros_adquisicion": {
+      "voltaje_kv": 200,
+      "magnificacion": 600000,
+      "modo": "High Resolution",
+      "tiempo_exposicion_s": 4.0,
+      "tamano_pixel_nm": 0.05
+    },
+    "analisis_morfologico": {
+      "forma_predominante": "Esférica",
+      "diametro_promedio_nm": 6.8,
+      "desviacion_estandar_nm": 0.9,
+      "distribucion": "Normal",
+      "recuento_particulas": 150
+    },
+    "mediciones_individuales": [
+      {"particula_id": 1, "diametro_nm": 6.2, "planos_visibles": "(111)"},
+      {"particula_id": 2, "diametro_nm": 7.5, "planos_visibles": "(200)"},
+      {"particula_id": 3, "diametro_nm": 6.9, "planos_visibles": "(111)"}
+    ],
+    "espaciamiento_interplanar": {
+      "d_111_nm": 0.224,
+      "d_200_nm": 0.194,
+      "estructura": "FCC Pd"
+    },
+    "observaciones": "PdNPs ultra-pequeñas con estructura cristalina perfecta, ideal para catálisis",
+    "archivo_imagen": "HRTEM_ORD008_PdNPs_600kx.tif",
+    "resolucion_imagen": {"ancho_px": 4096, "alto_px": 4096}
+  },
+  {
+    "id_orden": 9,
+    "id_nanomaterial": 10,
+    "fecha_captura": {"$date": "2023-05-11T13:45:00.000Z"},
+    "tipo_microscopia": "SEM",
+    "id_equipo": 14,
+    "operador": "Ana Rodríguez",
+    "parametros_adquisicion": {
+      "voltaje_kv": 5,
+      "magnificacion": 100000,
+      "detector": "SE2",
+      "distancia_trabajo_mm": 5.0,
+      "recubrimiento": "Pt 3nm"
+    },
+    "analisis_morfologico": {
+      "forma_predominante": "Tubular",
+      "diametro_externo_promedio_nm": 80,
+      "longitud_promedio_nm": 250,
+      "estructura_pared": "Ordenada",
+      "orientacion": "Vertical"
+    },
+    "mediciones_individuales": [
+      {"nanotubo_id": 1, "diametro_nm": 78, "longitud_nm": 245},
+      {"nanotubo_id": 2, "diametro_nm": 82, "longitud_nm": 258},
+      {"nanotubo_id": 3, "diametro_nm": 79, "longitud_nm": 248}
+    ],
+    "analisis_edx": {
+      "elementos_detectados": ["Ti", "O"],
+      "composicion_at_porcentaje": {
+        "Ti": 33.5,
+        "O": 66.5
+      },
+      "estequiometria": "TiO2"
+    },
+    "observaciones": "Nanotubos de TiO2 altamente ordenados con orientación vertical, estructura mesoporosa",
+    "archivo_imagen": "SEM_ORD009_TiO2NT_100kx.tif",
+    "resolucion_imagen": {"ancho_px": 1024, "alto_px": 768}
+  },
+  {
+    "id_orden": 10,
+    "id_nanomaterial": 3,
+    "fecha_captura": {"$date": "2023-05-25T12:00:00.000Z"},
+    "tipo_microscopia": "TEM",
+    "id_equipo": 2,
+    "operador": "Ana Rodríguez",
+    "parametros_adquisicion": {
+      "voltaje_kv": 200,
+      "magnificacion": 200000,
+      "modo": "Bright Field",
+      "tiempo_exposicion_s": 3.5,
+      "tamano_pixel_nm": 0.2
+    },
+    "analisis_morfologico": {
+      "tipo_estructura": "Láminas arrugadas",
+      "espesor_promedio_nm": 0.9,
+      "numero_capas": "1-2",
+      "area_lamina_promedio_um2": 5.2,
+      "transparencia_electronica": "Alta"
+    },
+    "mediciones_individuales": [
+      {"lamina_id": 1, "espesor_nm": 0.8, "capas": 1, "area_um2": 6.5},
+      {"lamina_id": 2, "espesor_nm": 1.4, "capas": 2, "area_um2": 4.2},
+      {"lamina_id": 3, "espesor_nm": 0.9, "capas": 1, "area_um2": 5.8}
+    ],
+    "patron_difraccion": {
+      "tipo": "Hexagonal",
+      "distancia_primera_reflexion_nm": 0.213,
+      "calidad": "Monocristalino"
+    },
+    "observaciones": "Grafeno reducido de alta calidad con estructura predominante de monocapa",
+    "archivo_imagen": "TEM_ORD010_rGO_200kx.tif",
+    "resolucion_imagen": {"ancho_px": 2048, "alto_px": 2048}
+  },
+  {
+    "id_orden": 11,
+    "id_nanomaterial": 16,
+    "fecha_captura": {"$date": "2023-06-08T14:30:00.000Z"},
+    "tipo_microscopia": "TEM-HR",
+    "id_equipo": 2,
+    "operador": "Isabella Silva",
+    "parametros_adquisicion": {
+      "voltaje_kv": 200,
+      "magnificacion": 800000,
+      "modo": "High Resolution",
+      "tiempo_exposicion_s": 5.0,
+      "tamano_pixel_nm": 0.03
+    },
+    "analisis_morfologico": {
+      "forma_predominante": "Esférica/Poliédrica",
+      "diametro_promedio_nm": 3.5,
+      "desviacion_estandar_nm": 0.4,
+      "distribucion": "Muy estrecha",
+      "recuento_particulas": 200
+    },
+    "mediciones_individuales": [
+      {"particula_id": 1, "diametro_nm": 3.2, "forma": "Cubo-octaédrica"},
+      {"particula_id": 2, "diametro_nm": 3.8, "forma": "Esférica"},
+      {"particula_id": 3, "diametro_nm": 3.5, "forma": "Poliédrica"}
+    ],
+    "espaciamiento_interplanar": {
+      "d_111_nm": 0.226,
+      "facetas_expuestas": ["(111)", "(100)"],
+      "estructura": "FCC Pt"
+    },
+    "observaciones": "PtNPs ultra-pequeñas con facetas (111) dominantes, optimizadas para ORR",
+    "archivo_imagen": "HRTEM_ORD011_PtNPs_800kx.tif",
+    "resolucion_imagen": {"ancho_px": 4096, "alto_px": 4096}
+  },
+  {
+    "id_orden": 12,
+    "id_nanomaterial": 5,
+    "fecha_captura": {"$date": "2023-06-23T10:45:00.000Z"},
+    "tipo_microscopia": "TEM",
+    "id_equipo": 2,
+    "operador": "Ana Rodríguez",
+    "parametros_adquisicion": {
+      "voltaje_kv": 200,
+      "magnificacion": 100000,
+      "modo": "Bright Field",
+      "tiempo_exposicion_s": 2.5,
+      "tamano_pixel_nm": 0.5
+    },
+    "analisis_morfologico": {
+      "forma_predominante": "Esférica",
+      "diametro_promedio_nm": 24.8,
+      "desviacion_estandar_nm": 3.2,
+      "distribucion": "Log-normal",
+      "recuento_particulas": 220
+    },
+    "mediciones_individuales": [
+      {"particula_id": 1, "diametro_nm": 22.5, "circularidad": 0.92},
+      {"particula_id": 2, "diametro_nm": 26.8, "circularidad": 0.94},
+      {"particula_id": 3, "diametro_nm": 24.1, "circularidad": 0.95}
+    ],
+    "recubrimiento_superficial": {
+      "tipo": "Citrato",
+      "espesor_nm": 1.8,
+      "carga_superficial": "Negativa"
+    },
+    "observaciones": "AgNPs con recubrimiento de citrato, alta estabilidad coloidal y actividad antibacteriana",
+    "archivo_imagen": "TEM_ORD012_AgNPs_100kx.tif",
+    "resolucion_imagen": {"ancho_px": 2048, "alto_px": 2048}
+  },
+  {
+    "id_orden": 13,
+    "id_nanomaterial": 7,
+    "fecha_captura": {"$date": "2023-07-14T11:30:00.000Z"},
+    "tipo_microscopia": "STEM-HAADF",
+    "id_equipo": 2,
+    "operador": "Isabella Silva",
+    "parametros_adquisicion": {
+      "voltaje_kv": 200,
+      "magnificacion": 400000,
+      "modo": "High Angle Annular Dark Field",
+      "tiempo_exposicion_s": 4.0,
+      "tamano_pixel_nm": 0.1
+    },
+    "analisis_morfologico": {
+      "forma_predominante": "Esférica",
+      "diametro_promedio_nm": 8.7,
+      "desviacion_estandar_nm": 1.1,
+      "tipo_aleacion": "Core-shell / Aleado",
+      "recuento_particulas": 180
+    },
+    "mediciones_individuales": [
+      {"particula_id": 1, "diametro_nm": 8.2, "tipo": "Aleado"},
+      {"particula_id": 2, "diametro_nm": 9.5, "tipo": "Aleado"},
+      {"particula_id": 3, "diametro_nm": 8.9, "tipo": "Core-shell"}
+    ],
+    "analisis_edx_mapping": {
+      "elementos": ["Au", "Pd"],
+      "distribucion_Au_porcentaje": 52,
+      "distribucion_Pd_porcentaje": 48,
+      "homogeneidad": "Alta"
+    },
+    "observaciones": "Nanocompuesto Au-Pd con aleación homogénea, algunas partículas muestran estructura core-shell",
+    "archivo_imagen": "STEM_ORD013_AuPd_400kx.tif",
+    "resolucion_imagen": {"ancho_px": 2048, "alto_px": 2048}
+  },
+  {
+    "id_orden": 14,
+    "id_nanomaterial": 2,
+    "fecha_captura": {"$date": "2023-07-28T09:00:00.000Z"},
+    "tipo_microscopia": "TEM",
+    "id_equipo": 2,
+    "operador": "Ana Rodríguez",
+    "parametros_adquisicion": {
+      "voltaje_kv": 200,
+      "magnificacion": 300000,
+      "modo": "Bright Field",
+      "tiempo_exposicion_s": 3.0,
+      "tamano_pixel_nm": 0.15
+    },
+    "analisis_morfologico": {
+      "forma_predominante": "Tubular",
+      "diametro_externo_promedio_nm": 20.1,
+      "diametro_interno_promedio_nm": 7.5,
+      "numero_paredes": "Multi-pared (6-9)",
+      "longitud_promedio_um": 1.8
+    },
+    "mediciones_individuales": [
+      {"cnt_id": 1, "diametro_ext_nm": 19.5, "paredes": 7, "defectos": "Bajo"},
+      {"cnt_id": 2, "diametro_ext_nm": 21.2, "paredes": 8, "defectos": "Bajo"},
+      {"cnt_id": 3, "diametro_ext_nm": 19.8, "paredes": 6, "defectos": "Muy bajo"}
+    ],
+    "calidad_estructural": {
+      "grafitizacion": "Alta",
+      "defectos_pared": "Mínimos",
+      "cerramiento_puntas": "Completo"
+    },
+    "observaciones": "CNTs de alta calidad con diámetro controlado y baja densidad de defectos",
+    "archivo_imagen": "TEM_ORD014_CNTs_300kx.tif",
+    "resolucion_imagen": {"ancho_px": 2048, "alto_px": 2048}
+  },
+  {
+    "id_orden": 15,
+    "id_nanomaterial": 6,
+    "fecha_captura": {"$date": "2023-08-11T15:15:00.000Z"},
+    "tipo_microscopia": "SEM",
+    "id_equipo": 14,
+    "operador": "Isabella Silva",
+    "parametros_adquisicion": {
+      "voltaje_kv": 10,
+      "magnificacion": 40000,
+      "detector": "InLens",
+      "distancia_trabajo_mm": 7.0,
+      "recubrimiento": "Au 5nm"
+    },
+    "analisis_morfologico": {
+      "forma_predominante": "Hexagonal",
+      "diametro_promedio_nm": 34.2,
+      "longitud_promedio_nm": 41.8,
+      "relacion_aspecto": 1.22,
+      "grado_aglomeracion": "Bajo"
+    },
+    "mediciones_individuales": [
+      {"cristal_id": 1, "ancho_nm": 32.5, "largo_nm": 39.8},
+      {"cristal_id": 2, "ancho_nm": 35.8, "largo_nm": 43.2},
+      {"cristal_id": 3, "ancho_nm": 34.5, "largo_nm": 42.5}
+    ],
+    "textura_superficial": {
+      "rugosidad": "Lisa",
+      "facetas": "Bien definidas",
+      "defectos": "Escasos"
+    },
+    "observaciones": "ZnO con morfología hexagonal uniforme y superficies prismáticas bien definidas",
+    "archivo_imagen": "SEM_ORD015_ZnO_40kx.tif",
+    "resolucion_imagen": {"ancho_px": 1280, "alto_px": 960}
+  },
+  {
+    "id_orden": 16,
+    "id_nanomaterial": 1,
+    "fecha_captura": {"$date": "2023-08-25T10:30:00.000Z"},
+    "tipo_microscopia": "TEM",
+    "id_equipo": 2,
+    "operador": "Ana Rodríguez",
+    "parametros_adquisicion": {
+      "voltaje_kv": 200,
+      "magnificacion": 150000,
+      "modo": "Bright Field",
+      "tiempo_exposicion_s": 3.0,
+      "tamano_pixel_nm": 0.3
+    },
+    "analisis_morfologico": {
+      "forma_predominante": "Esférica",
+      "diametro_promedio_nm": 15.5,
+      "desviacion_estandar_nm": 1.9,
+      "distribucion": "Normal",
+      "recuento_particulas": 300
+    },
+    "mediciones_individuales": [
+      {"particula_id": 1, "diametro_nm": 14.8, "circularidad": 0.96},
+      {"particula_id": 2, "diametro_nm": 16.5, "circularidad": 0.94},
+      {"particula_id": 3, "diametro_nm": 15.2, "circularidad": 0.97}
+    ],
+    "aplicacion_sers": {
+      "hot_spots_identificados": 45,
+      "distancia_interparticula_promedio_nm": 2.5,
+      "agregados_dimericos": 12
+    },
+    "observaciones": "AuNPs optimizadas para SERS con hot-spots bien distribuidos",
+    "archivo_imagen": "TEM_ORD016_AuNPs_SERS_150kx.tif",
+    "resolucion_imagen": {"ancho_px": 2048, "alto_px": 2048}
+  },
+  {
+    "id_orden": 17,
+    "id_nanomaterial": 12,
+    "fecha_captura": {"$date": "2023-09-09T13:00:00.000Z"},
+    "tipo_microscopia": "SEM",
+    "id_equipo": 14,
+    "operador": "Ana Rodríguez",
+    "parametros_adquisicion": {
+      "voltaje_kv": 15,
+      "magnificacion": 50000,
+      "detector": "SE2",
+      "distancia_trabajo_mm": 8.0,
+      "recubrimiento": "Pt 4nm"
+    },
+    "analisis_morfologico": {
+      "tipo_estructura": "Híbrida",
+      "particulas_ag_nm": 22.5,
+      "cristales_zno_nm": 35.8,
+      "distribucion_ag": "Uniforme sobre ZnO",
+      "cobertura_ag_porcentaje": 25
+    },
+    "mediciones_individuales": [
+      {"estructura_id": 1, "zno_nm": 34.2, "ag_nm": 20.8},
+      {"estructura_id": 2, "zno_nm": 37.5, "ag_nm": 24.1},
+      {"estructura_id": 3, "zno_nm": 35.9, "ag_nm": 22.8}
+    ],
+    "analisis_edx": {
+      "elementos_detectados": ["Zn", "O", "Ag"],
+      "composicion_at_porcentaje": {
+        "Zn": 37.5,
+        "O": 50.0,
+        "Ag": 12.5
+      }
+    },
+    "observaciones": "Nanocompuesto Ag-ZnO híbrido con Ag bien distribuida sobre matriz de ZnO hexagonal",
+    "archivo_imagen": "SEM_ORD017_AgZnO_50kx.tif",
+    "resolucion_imagen": {"ancho_px": 1024, "alto_px": 768}
+  },
+  {
+    "id_orden": 18,
+    "id_nanomaterial": 5,
+    "fecha_captura": {"$date": "2023-09-23T11:00:00.000Z"},
+    "tipo_microscopia": "TEM",
+    "id_equipo": 2,
+    "operador": "Ana Rodríguez",
+    "parametros_adquisicion": {
+      "voltaje_kv": 200,
+      "magnificacion": 120000,
+      "modo": "Bright Field",
+      "tiempo_exposicion_s": 2.5,
+      "tamano_pixel_nm": 0.4
+    },
+    "analisis_morfologico": {
+      "forma_predominante": "Esférica",
+      "diametro_promedio_nm": 25.5,
+      "desviacion_estandar_nm": 2.8,
+      "distribucion": "Normal",
+      "recuento_particulas": 240
+    },
+    "mediciones_individuales": [
+      {"particula_id": 1, "diametro_nm": 23.8, "circularidad": 0.93},
+      {"particula_id": 2, "diametro_nm": 27.2, "circularidad": 0.95},
+      {"particula_id": 3, "diametro_nm": 25.1, "circularidad": 0.94}
+    ],
+    "estado_superficial": {
+      "oxidacion_visible": "Mínima",
+      "capa_pasivacion_nm": 1.2,
+      "estabilidad": "Alta"
+    },
+    "observaciones": "AgNPs con morfología controlada y capa de pasivación que preserva propiedades antibacterianas",
+    "archivo_imagen": "TEM_ORD018_AgNPs_120kx.tif",
+    "resolucion_imagen": {"ancho_px": 2048, "alto_px": 2048}
+  },
+  {
+    "id_orden": 1,
+    "id_nanomaterial": 1,
+    "fecha_captura": {"$date": "2023-01-13T16:45:00.000Z"},
+    "tipo_microscopia": "DLS-Imaging",
+    "id_equipo": 9,
+    "operador": "Claudia Vargas",
+    "parametros_adquisicion": {
+      "temperatura_c": 25,
+      "tiempo_medicion_s": 300,
+      "concentracion_mg_ml": 0.1,
+      "medio": "PBS pH 7.4"
+    },
+    "analisis_morfologico": {
+      "diametro_hidrodinamico_nm": 18.5,
+      "indice_polidispersidad": 0.08,
+      "forma_inferida": "Esférica",
+      "estado_agregacion": "Monomérico"
+    },
+    "distribucion_poblacional": {
+      "pico_1_nm": 18.5,
+      "pico_1_porcentaje": 92.5,
+      "pico_2_nm": 45.2,
+      "pico_2_porcentaje": 7.5
+    },
+    "estabilidad_coloidal": {
+      "potencial_zeta_mv": -32.4,
+      "conductividad_ms_cm": 1.2,
+      "movilidad_electroforetica": -2.5
+    },
+    "observaciones": "Suspensión coloidal estable con baja agregación, ideal para aplicaciones biomédicas",
+    "archivo_imagen": "DLS_ORD001_distribution.png",
+    "resolucion_imagen": {"ancho_px": 800, "alto_px": 600}
+  },
+  {
+    "id_orden": 5,
+    "id_nanomaterial": 6,
+    "fecha_captura": {"$date": "2023-03-08T16:00:00.000Z"},
+    "tipo_microscopia": "SEM-3D",
+    "id_equipo": 14,
+    "operador": "Isabella Silva",
+    "parametros_adquisicion": {
+      "voltaje_kv": 10,
+      "magnificacion": 25000,
+      "angulos_tilt": [-10, 0, 10],
+      "detector": "SE2",
+      "reconstruccion_3d": true
+    },
+    "analisis_morfologico": {
+      "forma_predominante": "Prisma hexagonal",
+      "altura_promedio_nm": 42.5,
+      "diametro_base_nm": 35.2,
+      "volumen_promedio_nm3": 34580,
+      "relacion_aspecto_3d": 1.21
+    },
+    "reconstruccion_3d": {
+      "particulas_reconstruidas": 15,
+      "precision_nm": 2.5,
+      "angulo_cobertura": 20
+    },
+    "topografia_superficial": {
+      "rugosidad_promedio_nm": 1.8,
+      "facetas_identificadas": 8,
+      "defectos_superficiales": "Escasos"
+    },
+    "observaciones": "Reconstrucción 3D confirma morfología prismática hexagonal uniforme del ZnO",
+    "archivo_imagen": "SEM3D_ORD005_ZnO_25kx.tif",
+    "resolucion_imagen": {"ancho_px": 1280, "alto_px": 960}
+  }
+]
