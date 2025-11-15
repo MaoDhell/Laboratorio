@@ -145,3 +145,18 @@ db.condiciones_ambientales.aggregate([
     }
 ]);
 
+
+// CONSULTA SIMPLE
+db.sensores_iot.find(
+    {
+        id_orden: { $in: [5, 8, 12, 15] }
+    },
+    {
+        id_orden: 1, //1 significa que incluya este dato
+        timestamp: 1,
+        temperatura_celsius: 1,
+        presion_atm: 1,
+        ph: 1
+    }
+).sort({ id_orden: 1, timestamp: 1 }).limit(100); //1 dentro del sort significa que sea ASC
+
