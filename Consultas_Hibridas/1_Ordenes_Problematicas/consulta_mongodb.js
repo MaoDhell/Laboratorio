@@ -1,15 +1,7 @@
-// =====================================================
-// CONSULTA HÍBRIDA 1: ÓRDENES PROBLEMÁTICAS
-// Parte 2: MongoDB
-// =====================================================
-// Objetivo: Analizar patrones de sensores IoT en órdenes
-//           con bajo rendimiento detectadas en SQL Server
-// =====================================================
 
 // NOTA: Los IDs [5, 8, 12, 15] vienen de la consulta SQL
-// Reemplazar con los IDs reales obtenidos de SQL Server
 
-// Agregación 1: Estadísticas de sensores por orden problemática
+
 db.sensores_iot.aggregate([
     {
         $match: {
@@ -76,9 +68,7 @@ db.sensores_iot.aggregate([
     }
 ]);
 
-// =====================================================
-// Agregación 2: Timeline de anomalías por orden
-// =====================================================
+
 db.sensores_iot.aggregate([
     {
         $match: {
@@ -121,9 +111,7 @@ db.sensores_iot.aggregate([
     }
 ]);
 
-// =====================================================
-// Agregación 3: Correlación con condiciones ambientales
-// =====================================================
+
 db.condiciones_ambientales.aggregate([
     {
         $match: {
@@ -157,10 +145,3 @@ db.condiciones_ambientales.aggregate([
     }
 ]);
 
-// =====================================================
-// RESULTADO ESPERADO:
-// - Identificación de patrones anormales en temperatura,
-//   presión y pH durante órdenes con bajo rendimiento
-// - Correlación entre condiciones ambientales y problemas
-// - Timeline de cuándo ocurrieron las anomalías
-// =====================================================
